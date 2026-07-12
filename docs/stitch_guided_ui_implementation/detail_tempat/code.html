@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e3e2e0",
+                        "on-primary-fixed-variant": "#930012",
+                        "on-secondary-container": "#626361",
+                        "text-muted": "#5F5F5F",
+                        "inverse-surface": "#313030",
+                        "tertiary": "#595a5b",
+                        "surface-container": "#f0edec",
+                        "on-primary-fixed": "#410004",
+                        "on-secondary-fixed-variant": "#464746",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1c1b1b",
+                        "surface-container-high": "#ebe7e7",
+                        "secondary": "#5e5e5d",
+                        "overlay-scrim": "rgba(0, 0, 0, 0.4)",
+                        "on-surface-variant": "#5e3f3c",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-tint": "#c0001b",
+                        "primary": "#b7001a",
+                        "background": "#fcf9f8",
+                        "on-tertiary-container": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "primary-fixed-dim": "#ffb3ad",
+                        "tertiary-container": "#717373",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface-bright": "#fcf9f8",
+                        "secondary-container": "#e0dfde",
+                        "inverse-primary": "#ffb3ad",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-warm": "#FAF9F7",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#e8bcb8",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-low": "#f6f3f2",
+                        "outline": "#936e6b",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container-lowest": "#ffffff",
+                        "border-subtle": "#EEEEEE",
+                        "primary-container": "#e60023",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-background": "#1c1b1b",
+                        "primary-fixed": "#ffdad7",
+                        "on-secondary-fixed": "#1a1c1b",
+                        "secondary-fixed-dim": "#c7c6c5",
+                        "on-primary-container": "#fff7f6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "4px",
+                        "margin-tablet": "24px",
+                        "base": "8px",
+                        "gutter": "12px",
+                        "margin-mobile": "16px",
+                        "stack-md": "12px",
+                        "stack-lg": "24px",
+                        "section-gap": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["20px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "600"}],
+                        "headline-md-mobile": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "headline-xl": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-warm min-h-screen text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<main class="max-w-md mx-auto relative bg-surface-container-lowest min-h-screen shadow-2xl">
+<!-- Hero Section -->
+<section class="relative h-[450px] w-full overflow-hidden">
+<img alt="Minimalist Cafe Interior" class="w-full h-full object-cover transform scale-105" data-alt="A sun-drenched minimalist specialty coffee shop in Jakarta with warm oak wood furniture and clean white walls. The scene is shot in a professional lifestyle photography style, emphasizing soft natural light and a calm, upscale atmosphere. The color palette is dominated by off-whites and light browns with a single vibrant red espresso machine as a focal point. The mood is serene, urban, and quietly premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVH3kkgJNfvwLTWhQ1Ev_4LR9M3KdYVFUirXP7fAHUjv7x8O3ckfaJMUOMHDXb5Nbw6qqW1IT8Zpp3uclD-mLj5mP6jizsv1ov-tiaeX7-CKDWO8DVY-Kfim6cykw10S0IB2BFmPa4cLwVoRowogE9MRVUteJbgriiHJmHVE_TIptL4FSYd6hh1gPVOtBTcZbDvWYfkKHHrh6VuT7mm1OnQQeuWhT94fMTqAU5GXkLVq4c3GCPopZ2Ak129oEK44a-QekwpiqCbzQ"/>
+<div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-surface-container-lowest"></div>
+<!-- Floating Navigation -->
+<nav class="absolute top-0 left-0 w-full flex justify-between items-center px-margin-mobile py-8 z-20">
+<button class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform" onclick="window.history.back()">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="flex gap-stack-md">
+<button class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">bookmark</span>
+</button>
+</div>
+</nav>
+</section>
+<!-- Place Details Canvas -->
+<article class="relative -mt-12 bg-surface-container-lowest rounded-t-[32px] px-margin-mobile pt-8 pb-32">
+<!-- Header Info -->
+<header class="mb-stack-lg">
+<div class="flex justify-between items-start mb-base">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-1">Kopi Nanti Dulu</h1>
+<p class="text-text-muted font-body-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            Senopati, Jakarta Selatan
+                        </p>
+</div>
+<div class="bg-primary-container/10 px-stack-md py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-primary">4.8</span>
+</div>
+</div>
+<!-- Chips -->
+<div class="flex flex-wrap gap-2 mt-stack-md">
+<span class="px-3 py-1.5 rounded-full bg-surface-warm text-text-muted font-label-md border border-border-subtle">Spesialis Kopi</span>
+<span class="px-3 py-1.5 rounded-full bg-surface-warm text-text-muted font-label-md border border-border-subtle">Tenang</span>
+<span class="px-3 py-1.5 rounded-full bg-surface-warm text-text-muted font-label-md border border-border-subtle">Minimalis</span>
+</div>
+</header>
+<!-- Review / Description -->
+<section class="mb-section-gap">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Tentang Tempat Ini</h2>
+<div class="space-y-4 text-text-muted font-body-lg leading-relaxed">
+<p>
+                        Tersembunyi di balik gedung perkantoran Senopati yang sibuk, Kopi Nanti Dulu menawarkan oase ketenangan yang jarang ditemukan. Desain interiornya yang minimalis dengan sentuhan kayu hangat menciptakan suasana yang sempurna untuk bekerja atau sekadar merenung.
+                    </p>
+<p>
+                        Wajib mencoba "Cold Brew Signature" mereka yang difermentasi selama 18 jam, memberikan rasa cokelat yang kaya tanpa rasa asam yang berlebihan. Sangat disarankan datang sebelum jam 10 pagi untuk mendapatkan spot terbaik di dekat jendela besar yang menghadap taman kecil.
+                    </p>
+</div>
+</section>
+<!-- Location Map Snippet -->
+<section class="mb-section-gap">
+<div class="flex justify-between items-center mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Lokasi</h2>
+<button class="text-primary font-label-md flex items-center gap-1 active:opacity-70">
+                        Buka Maps
+                        <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+<div class="w-full h-48 rounded-xl overflow-hidden relative border border-border-subtle group">
+<img alt="Map showing Jakarta Senopati area" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-700" data-alt="A stylized aerial street map of a modern urban neighborhood in Jakarta. The map features clean lines, muted gray and off-white colors, and a single prominent red pin indicating a location. The visual style is inspired by premium minimal map design, maintaining a clean light-mode aesthetic with high-contrast labels in a modern sans-serif font." data-location="Jakarta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeS-v3K6_FRz5w0J_oRSGUl1RnDd8DEZS0kktoISItIWn_zkB_ITDHs6bdvaTsuJ_PzVZi3CUvW9OeyzuAG4BZAY0b9Q3cAgz4kkPqmZwhZLU5tMM4-_r8BTvc0Ue-xvApwk1Px1CIY_7Y5mIlKGN01_lZNMfTJRWSLa_E1Zw-rdwybMWQz4DVuOu2HBoknOrgRBgZ9V60j43yMrDYEUu4gPi878x_6ac0cbDFSy0WbSpNZf1V5qirYi0bmRejBPGxDSBOm92PRio"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-primary text-[32px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+<p class="mt-stack-md text-text-muted font-body-md">
+                    Jl. Senopati No. 42, Kebayoran Baru, Jakarta Selatan, 12190.
+                </p>
+</section>
+<!-- Gallery Snippet (Asymmetric) -->
+<section class="mb-section-gap">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Galeri Foto</h2>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="h-64 rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up professional food photography of a perfectly poured latte in a ceramic cup on a wooden table. The lighting is soft and natural, emphasizing the creamy texture and warm tones. The background is a blurred minimalist cafe interior. Modern lifestyle aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdpVsS12fayLmNiVUWHb20G6kuKlKSbZWSwDmsNnWzsseqbyOx_Ez5nETPJSu-nHJHeDXETz3AAtjwsi4qILyV8KKXvU6HvSMd-RF4MBYXSAJ76CvTor3WubxxU3KaIj4BR6Bo5jlszf-o3uH2vNO3rg11BdONjNPGe8fGHAHpLneo77zUziE8Jm8JEY3MKbmnZo3WAd6OdYFp7bxQj3F-VvooRD2SQHrZJqTP8e3nQKl8Ew6VKtqKfX_p7BN2gARwuRVAOSAmWJo"/>
+</div>
+<div class="flex flex-col gap-stack-md">
+<div class="h-[124px] rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A small, lush indoor garden nook inside a minimalist cafe with natural stone flooring and tropical plants. Bright sunlight streams through a skylight. The atmosphere is tranquil and upscale. Professional architectural photography style with a light and airy feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwsAuRfHLhWR01WNf3VTBJGb0HgyDSFHaD3oF9GCp8zYaNYRxzjTpr3X3mrn8dfLYcxNgUx2K4G9uXWoOL8uTxnWQu5u_y9K6E0zVsXa19OvampaiqPQb5oo9z7BNe6T-pdG1hgONOnWKZHVKk76H34rchHAZuX7QS6jTyYtOAOiCQjqQjtA3kZIHyZ3PtUACsgkox-09EhKN8_Edjy4gTK9c8SJ-gI_9A9jEG9QV89VFhkf42ED-VSqrNMKCFvviJaEUBbUm7uvQ"/>
+</div>
+<div class="h-[124px] rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Top down view of a minimalist cafe table with a journal, a pen, and a glass of cold brew coffee. The scene is bright and organized, following a Pinterest-style aesthetic. Warm neutral tones with subtle red accents in the pen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcB8l2eZxR0X9-P5t3DeOkUBwnTpCWjC_kEzquLtem3yDh0m8lKeisJ4zm1KU9wixB_osoWHrLubMWAJLAeI5TEznEAj0wiegMDAt3PAyxH3SboGWeWqwtwneaYbfDvrFOw_gL0Yo-ueY-khEGYEaZUv9eGUYMHwUDuFjHqHuxR5NZpFHjdsAX6NbBz5Oog_xGiaOHkVj3jjlvGRabZs0fLofWZNfO9cbyEefOq1oqkn3rXsnfFYbFXp1qBRnE_aGwD3b2qh_ARFI"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center text-white">
+<span class="font-label-md">+12 Foto</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</article>
+<!-- Fixed Bottom Action -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md p-margin-mobile bg-white/80 backdrop-blur-xl border-t border-border-subtle flex gap-stack-md z-40">
+<button class="flex-[1] h-14 rounded-xl border border-border-subtle flex items-center justify-center text-on-surface font-label-md active:bg-surface-warm transition-colors">
+<span class="material-symbols-outlined mr-2">bookmark</span>
+                Simpan
+            </button>
+<button class="flex-[2] h-14 rounded-xl bg-primary text-white font-label-md flex items-center justify-center active:scale-[0.98] transition-transform shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined mr-2">directions</span>
+                Kunjungi
+            </button>
+</div>
+</main>
+<script>
+        // Micro-interaction for scroll effects
+        window.addEventListener('scroll', () => {
+            const scroll = window.scrollY;
+            const heroImage = document.querySelector('section img');
+            if (heroImage) {
+                heroImage.style.transform = `scale(${1.05 + scroll * 0.0005}) translateY(${scroll * 0.2}px)`;
+            }
+        });
+
+        // Haptic feedback simulation for buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (window.navigator.vibrate) {
+                    window.navigator.vibrate(5);
+                }
+            });
+        });
+    </script>
+</body></html>

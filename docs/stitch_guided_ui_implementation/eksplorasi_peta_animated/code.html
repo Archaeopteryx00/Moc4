@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Hidden Bites - Explore Map</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#e3e2e0",
+                      "on-primary-fixed-variant": "#930012",
+                      "on-secondary-container": "#626361",
+                      "text-muted": "#5F5F5F",
+                      "inverse-surface": "#313030",
+                      "tertiary": "#595a5b",
+                      "surface-container": "#f0edec",
+                      "on-primary-fixed": "#410004",
+                      "on-secondary-fixed-variant": "#464746",
+                      "inverse-on-surface": "#f3f0ef",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#1c1b1b",
+                      "surface-container-high": "#ebe7e7",
+                      "secondary": "#5e5e5d",
+                      "overlay-scrim": "rgba(0, 0, 0, 0.4)",
+                      "on-surface-variant": "#5e3f3c",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-tint": "#c0001b",
+                      "primary": "#b7001a",
+                      "background": "#fcf9f8",
+                      "on-tertiary-container": "#f9f9f9",
+                      "on-secondary": "#ffffff",
+                      "surface": "#fcf9f8",
+                      "primary-fixed-dim": "#ffb3ad",
+                      "tertiary-container": "#717373",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "surface-bright": "#fcf9f8",
+                      "secondary-container": "#e0dfde",
+                      "inverse-primary": "#ffb3ad",
+                      "surface-container-highest": "#e5e2e1",
+                      "surface-warm": "#FAF9F7",
+                      "on-tertiary": "#ffffff",
+                      "outline-variant": "#e8bcb8",
+                      "error": "#ba1a1a",
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#e5e2e1",
+                      "surface-container-low": "#f6f3f2",
+                      "outline": "#936e6b",
+                      "surface-dim": "#dcd9d9",
+                      "surface-container-lowest": "#ffffff",
+                      "border-subtle": "#EEEEEE",
+                      "primary-container": "#e60023",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-background": "#1c1b1b",
+                      "primary-fixed": "#ffdad7",
+                      "on-secondary-fixed": "#1a1c1b",
+                      "secondary-fixed-dim": "#c7c6c5",
+                      "on-primary-container": "#fff7f6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "4px",
+                      "margin-tablet": "24px",
+                      "base": "8px",
+                      "gutter": "12px",
+                      "margin-mobile": "16px",
+                      "stack-md": "12px",
+                      "stack-lg": "24px",
+                      "section-gap": "32px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "headline-xl": ["Plus Jakarta Sans"],
+                      "label-sm": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-lg": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "headline-lg": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["20px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "600"}],
+                      "headline-md-mobile": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                      "headline-xl": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .map-container {
+            height: calc(100vh - 56px);
+            position: relative;
+            overflow: hidden;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Animations */
+        @keyframes slide-down {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slide-up-bounce {
+            0% { transform: translateY(120%); opacity: 0; }
+            60% { transform: translateY(-10%); opacity: 1; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes pop-in {
+            0% { transform: scale(0); opacity: 0; }
+            70% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes pulse-select {
+            0% { box-shadow: 0 0 0 0 rgba(183, 0, 26, 0.4); transform: scale(1.1); }
+            70% { box-shadow: 0 0 0 10px rgba(183, 0, 26, 0); transform: scale(1.15); }
+            100% { box-shadow: 0 0 0 0 rgba(183, 0, 26, 0); transform: scale(1.1); }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        @keyframes slow-pan {
+            0% { transform: scale(1.1) translate(0, 0); }
+            50% { transform: scale(1.1) translate(-1%, -1%); }
+            100% { transform: scale(1.1) translate(0, 0); }
+        }
+
+        .animate-slide-down { animation: slide-down 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .animate-slide-up-bounce { animation: slide-up-bounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+        .animate-pop-in { animation: pop-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; opacity: 0; }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .animate-slow-pan { animation: slow-pan 40s ease-in-out infinite; }
+        
+        .marker-selected .marker-icon {
+            animation: pulse-select 1.5s infinite;
+            background-color: theme('colors.primary') !important;
+            color: white !important;
+        }
+
+        .shimmer-effect {
+            background: linear-gradient(90deg, #f0f0f0 25%, #f8f8f8 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-slide-down, .animate-slide-up-bounce, .animate-pop-in, .animate-float, .animate-slow-pan, .shimmer-effect {
+                animation: none !important;
+                transform: none !important;
+                opacity: 1 !important;
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-warm font-body-md text-on-surface overflow-hidden">
+<!-- Top AppBar -->
+<header class="flex items-center justify-between px-margin-mobile w-full h-14 sticky top-0 z-50 bg-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Hidden Bites</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors active:scale-90">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+</div>
+</header>
+<!-- Main Content: Full Screen Map -->
+<main class="map-container w-full bg-surface-container">
+<!-- Mock Map Background -->
+<div class="absolute inset-0 w-full h-full grayscale-[0.2] overflow-hidden">
+<img alt="City map layout" class="w-full h-full object-cover animate-slow-pan origin-center scale-110" data-alt="A clean, minimalist aerial view of a sophisticated city grid with modern architecture and lush urban parks. The aesthetic is bright and airy with high-key natural lighting, emphasizing the warm off-white tones of the buildings and soft green spaces. The visual style is professional and cartographic, using a contemporary design language that feels premium and organized." data-location="Tokyo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6QH2m00Anc-tK-S8OVX_QnNW3K5BheKniEHjnPDuCou141RnahtxrMUtbilCE8EjxixxNThvmLL9iAo2lB7FgvQi7V0B2dNnYIS2exqP_5ZqVTTmqeCkR13pfMG1SK_jhP7gQPImbWWxJu_3XRc2Yuf213ku90MTaKkrrq34aK6RFrMbUh6lXYe2zSiJG5sd4caXWOdI8sO9gcpztK_ArRheiHTx_LZHG4bmji0lItKw_pKC_uWmrqh8RefLUycDFaZtFWJpjvxo"/>
+<!-- Map Markers -->
+<!-- Marker 1: Active/Selected -->
+<button class="absolute top-[35%] left-[25%] group marker-selected animate-pop-in animate-float" onclick="selectMarker(this, 'kissa-mitsu')" style="animation-delay: 0.1s, 0s;">
+<div class="marker-icon bg-primary text-white p-2 rounded-full shadow-lg border-2 border-white flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[18px]" data-icon="restaurant" data-weight="fill" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<div class="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white px-2 py-1 rounded shadow-sm text-label-md whitespace-nowrap border border-border-subtle">
+                    Kissa Mitsu
+                </div>
+</button>
+<!-- Marker 2 -->
+<button class="absolute top-[20%] left-[60%] group animate-pop-in animate-float" onclick="selectMarker(this, 'vinyl-cafe')" style="animation-delay: 0.2s, 0.5s;">
+<div class="marker-icon bg-white text-primary p-2 rounded-full shadow-md border border-border-subtle flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[18px]" data-icon="local_cafe">local_cafe</span>
+</div>
+<div class="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded shadow-sm text-label-md whitespace-nowrap border border-border-subtle">
+                    Vinyl &amp; Brew
+                </div>
+</button>
+<!-- Marker 3 -->
+<button class="absolute top-[60%] left-[45%] group animate-pop-in animate-float" onclick="selectMarker(this, 'hidden-garden')" style="animation-delay: 0.3s, 0.2s;">
+<div class="marker-icon bg-white text-primary p-2 rounded-full shadow-md border border-border-subtle flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[18px]" data-icon="bakery_dining">bakery_dining</span>
+</div>
+<div class="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded shadow-sm text-label-md whitespace-nowrap border border-border-subtle">
+                    The Yeast Attic
+                </div>
+</button>
+</div>
+<!-- Floating Search Overlay -->
+<div class="absolute top-4 left-margin-mobile right-margin-mobile z-10">
+<div class="bg-white/95 backdrop-blur-md rounded-xl shadow-lg p-1 flex items-center border border-border-subtle animate-slide-down">
+<div class="flex items-center flex-1 px-3">
+<span class="material-symbols-outlined text-text-muted mr-3" data-icon="search">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 font-body-md text-on-surface py-2" placeholder="Find a hidden gem..." type="text"/>
+</div>
+<div class="h-6 w-[1px] bg-border-subtle mx-2"></div>
+<button class="p-2 text-primary active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="my_location">my_location</span>
+</button>
+</div>
+<!-- Quick Filters Chips -->
+<div class="flex gap-2 mt-4 overflow-x-auto no-scrollbar pb-2 animate-slide-down" style="animation-delay: 0.1s;">
+<button class="bg-white px-4 py-1.5 rounded-full shadow-sm text-label-md border border-border-subtle flex items-center gap-1.5 whitespace-nowrap hover:bg-surface-warm transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[16px]" data-icon="coffee">coffee</span> Coffee
+                </button>
+<button class="bg-white px-4 py-1.5 rounded-full shadow-sm text-label-md border border-border-subtle flex items-center gap-1.5 whitespace-nowrap hover:bg-surface-warm transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[16px]" data-icon="restaurant">restaurant</span> Dinner
+                </button>
+<button class="bg-white px-4 py-1.5 rounded-full shadow-sm text-label-md border border-border-subtle flex items-center gap-1.5 whitespace-nowrap hover:bg-surface-warm transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[16px]" data-icon="wine_bar">wine_bar</span> Bars
+                </button>
+<button class="bg-white px-4 py-1.5 rounded-full shadow-sm text-label-md border border-border-subtle flex items-center gap-1.5 whitespace-nowrap hover:bg-surface-warm transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[16px]" data-icon="stars">stars</span> Highly Rated
+                </button>
+</div>
+</div>
+<!-- Selected Preview Card (Bottom Floating) -->
+<div class="absolute bottom-20 left-margin-mobile right-margin-mobile z-20 transition-all duration-300 animate-slide-up-bounce" id="preview-card" style="animation-delay: 0.4s;">
+<div class="bg-white rounded-xl shadow-xl overflow-hidden flex border border-border-subtle max-w-lg mx-auto">
+<div class="w-1/3 aspect-square relative overflow-hidden shimmer-effect">
+<img alt="Cafe interior" class="w-full h-full object-cover transition-opacity duration-500" data-alt="A warm and inviting interior of a Japanese-style kissaten cafe. The space features dark polished wood, soft amber lighting from vintage lamps, and a cozy counter with neatly arranged ceramics. The atmosphere is quiet and sophisticated, reflecting a premium urban lifestyle. The color palette is rich with deep browns, warm golds, and ivory accents." onload="this.classList.remove('opacity-0')" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSwxRjq53p1_OFHQG3BtLEJVMcy2A6FrlXNwHW1BmGZr32yJlaZHIMxK5j2Y1LxCUGHnsXpXm_EsGDu6iWIdj95YXsO94deK7LLHqe5-Y8V8dBSVNt30QspwSyfZunyElvHX2bGIr-denft3WHxZjZKC3w9dvdIncRTAUzsxyJPKuPfPoRCPuLjHvJQtp3PzDm4iBhN4gUJxvbr5e6BINu90_uXl3HG7QA5JO05vX6PAfCifSRLm3vdx-NU2ts1zJwftj_ixlUDtg"/>
+<div class="absolute top-2 left-2 bg-primary/90 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm z-10">
+                        TOP PICK
+                    </div>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Kissa Mitsu</h3>
+<button class="text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="bookmark" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-md text-on-surface">4.9</span>
+<span class="text-label-md text-text-muted ml-1">· Coffee &amp; Jazz</span>
+</div>
+<p class="text-body-md text-text-muted mt-2 line-clamp-1">A quiet haven for pour-over coffee and rare vinyl records in Shibuya.</p>
+</div>
+<div class="flex gap-2 mt-4">
+<button class="flex-1 bg-primary text-white py-2 rounded-lg text-label-md font-bold active:scale-95 transition-transform">
+                            View Details
+                        </button>
+<button class="w-10 h-10 flex items-center justify-center border border-border-subtle rounded-lg text-text-muted hover:bg-surface-warm transition-colors active:scale-90">
+<span class="material-symbols-outlined" data-icon="directions">directions</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface-container-lowest shadow-sm border-t border-border-subtle">
+<a class="flex flex-col items-center justify-center text-secondary p-2 hover:bg-secondary-container/20 rounded-full transition-all scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-primary-container/10 rounded-xl p-2 scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="explore" data-weight="fill" style="font-variation-settings: 'FILL' 1;">explore</span>
+</a>
+<button class="flex flex-col items-center justify-center text-secondary p-2 hover:bg-secondary-container/20 rounded-full transition-all scale-98 active:scale-95">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</button>
+<a class="flex flex-col items-center justify-center text-secondary p-2 hover:bg-secondary-container/20 rounded-full transition-all scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</a>
+</nav>
+<!-- Interaction Script -->
+<script>
+        function selectMarker(element, id) {
+            // Update marker styles
+            document.querySelectorAll('.group').forEach(m => {
+                m.classList.remove('marker-selected');
+                // Ensure default marker icon state
+                const icon = m.querySelector('.marker-icon');
+                if (icon) {
+                    icon.classList.remove('bg-primary', 'text-white');
+                    icon.classList.add('bg-white', 'text-primary');
+                }
+            });
+            
+            element.classList.add('marker-selected');
+            const activeIcon = element.querySelector('.marker-icon');
+            if (activeIcon) {
+                activeIcon.classList.remove('bg-white', 'text-primary');
+                activeIcon.classList.add('bg-primary', 'text-white');
+            }
+
+            // Animate card
+            const card = document.getElementById('preview-card');
+            card.style.animation = 'none';
+            card.offsetHeight; // trigger reflow
+            card.style.animation = 'slide-up-bounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards';
+        }
+    </script>
+</body></html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#e3e2e0",
+                    "on-primary-fixed-variant": "#930012",
+                    "on-secondary-container": "#626361",
+                    "text-muted": "#5F5F5F",
+                    "inverse-surface": "#313030",
+                    "tertiary": "#595a5b",
+                    "surface-container": "#f0edec",
+                    "on-primary-fixed": "#410004",
+                    "on-secondary-fixed-variant": "#464746",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1c1b1b",
+                    "surface-container-high": "#ebe7e7",
+                    "secondary": "#5e5e5d",
+                    "overlay-scrim": "rgba(0, 0, 0, 0.4)",
+                    "on-surface-variant": "#5e3f3c",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-tint": "#c0001b",
+                    "primary": "#b7001a",
+                    "background": "#fcf9f8",
+                    "on-tertiary-container": "#f9f9f9",
+                    "on-secondary": "#ffffff",
+                    "surface": "#fcf9f8",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "tertiary-container": "#717373",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "surface-bright": "#fcf9f8",
+                    "secondary-container": "#e0dfde",
+                    "inverse-primary": "#ffb3ad",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-warm": "#FAF9F7",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#e8bcb8",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e5e2e1",
+                    "surface-container-low": "#f6f3f2",
+                    "outline": "#936e6b",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container-lowest": "#ffffff",
+                    "border-subtle": "#EEEEEE",
+                    "primary-container": "#e60023",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-background": "#1c1b1b",
+                    "primary-fixed": "#ffdad7",
+                    "on-secondary-fixed": "#1a1c1b",
+                    "secondary-fixed-dim": "#c7c6c5",
+                    "on-primary-container": "#fff7f6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "4px",
+                    "margin-tablet": "24px",
+                    "base": "8px",
+                    "gutter": "12px",
+                    "margin-mobile": "16px",
+                    "stack-md": "12px",
+                    "stack-lg": "24px",
+                    "section-gap": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-lg": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["20px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "600"}],
+                    "headline-md-mobile": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "headline-xl": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 10px;
+            gap: 12px;
+        }
+        .masonry-item {
+            grid-row-end: span 22;
+        }
+        .masonry-item-tall {
+            grid-row-end: span 28;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-warm font-body-md text-on-surface">
+<!-- Top AppBar -->
+<header class="flex items-center justify-between px-margin-mobile w-full h-14 sticky top-0 z-50 bg-surface dark:bg-surface">
+<div class="flex items-center gap-2">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-primary">Hidden Bites</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary">search</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="px-margin-mobile pb-24">
+<!-- Category Pill Scroller -->
+<div class="flex overflow-x-auto gap-stack-md py-stack-lg no-scrollbar -mx-margin-mobile px-margin-mobile">
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all active:scale-95">All Spots</button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container text-text-muted font-label-md text-label-md hover:bg-secondary-container/20 transition-all active:scale-95">Quiet</button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container text-text-muted font-label-md text-label-md hover:bg-secondary-container/20 transition-all active:scale-95">Coffee</button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container text-text-muted font-label-md text-label-md hover:bg-secondary-container/20 transition-all active:scale-95">Late Night</button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container text-text-muted font-label-md text-label-md hover:bg-secondary-container/20 transition-all active:scale-95">Artisan</button>
+</div>
+<!-- Pinterest-style Masonry Feed -->
+<div class="grid grid-cols-2 gap-3 items-start">
+<!-- Item 1 -->
+<div class="flex flex-col gap-2">
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-white shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
+<img class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cinematic, vertical shot of a minimalist high-end cafe interior with warm oak wood furniture and soft sunlight streaming through floor-to-ceiling windows. The aesthetic is clean and humanist with a neutral color palette of off-whites and natural textures. One single cup of artisanal coffee sits on a small round table, emphasizing a quiet, peaceful urban hidden gem atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5ugUKCCGHjrWdrDMFz7rfkbvUb2bTdSmBbFswu5oT5lRqpztb8D4MD5WeVW1g-2i8du5-HEa5V-PLfIk_Y15oqDLBkkiPU8GjdW8a47-2A6kRO7LkMj8i1H7hfRvWsAkZK00TW2oij2Aj0o8OVf773wsNJKslxksXeoo2ZVDHqBSbI3oXbVcdP2uElBn1MUv_Yqnxy4Zf7CKEN4HMOutROQfxDxbLQ6YkI8VKcOMliRVwfwL0bkKjXiF2zCW_2UouVnEbYWQ82Jc"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-primary shadow-sm hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+<div class="px-1">
+<h3 class="font-headline-md-mobile text-headline-md-mobile leading-tight truncate">The Velvet Grain</h3>
+<p class="font-label-md text-label-md text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Shoreditch
+                    </p>
+<div class="mt-1">
+<span class="inline-block px-2 py-0.5 rounded-md bg-surface-container text-[10px] font-label-md text-text-muted uppercase tracking-wider">Hidden Gem</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col gap-2">
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-white shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
+<img class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A moody, high-contrast photograph of a boutique pastry shop display at night. The lighting is warm and targeted, illuminating artisanal flaky croissants and delicate fruit tarts on a dark marble countertop. The overall mood is sophisticated and intimate, utilizing deep shadows and rich textures to create a premium, realistic urban discovery feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0CR2JmmRixqxDRgw0bfuaEJmXeTCMK0sq1uPeDZz2MnOyqwj_-jI0Z0_z7X7VOr4bUtW30a5T1slOexaTV3dAtOleLGA3_c_zIWEq-P1BoIG7rs6vHBjz47V7TvuFc55KdZHUGuhQEydL_fwClXBUNTBV4cHifc6pY-pzLgeNK0dwdyxfJwVQQKLb9ZBnGiSDpHObfy21mtMRbWvVUTz0X0E8UlmF8kMrRve7q3B-F8NI6-QG8at3OCqm5qLneww-z3aRpXDSvZE"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-primary shadow-sm hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+<div class="px-1">
+<h3 class="font-headline-md-mobile text-headline-md-mobile leading-tight truncate">Petals &amp; Flour</h3>
+<p class="font-label-md text-label-md text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Marylebone
+                    </p>
+<div class="mt-1">
+<span class="inline-block px-2 py-0.5 rounded-md bg-surface-container text-[10px] font-label-md text-text-muted uppercase tracking-wider">Cozy</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col gap-2 mt-2">
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-white shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
+<img class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A bright and airy overhead shot of three distinct ceramic mugs of latte art and a scattered arrangement of coffee beans on a rustic wooden table. The lighting is natural and high-key, creating a warm, inviting lifestyle magazine aesthetic. The color palette focuses on soft browns, creams, and the vibrant red of a small accent flower nearby." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC39WMl6vFVkX6Ak-6Hi2q8glxV1u-kBejtTsQKBhWJxKQWdjB4scPBt9i26F9jKpqnq4eFXHZnm-wvgl-ZujmIo_ezdCGKtD6GeFUDYT225RJ8kkzhXsmj8jaY9WJTtnWeG4pckWTCNS26QS-SFI8FS4VWztw8lEmxiK1B58rNCYJWGnI37Vlouf3hZ6sXOeOREKIakjjuQOLJ5yiMNvZ711ulBSb6gXbbbLcxI-MIGmx988S6pCMfgFNRk2UNxYGwSrQjDqZqulo"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-primary shadow-sm hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+<div class="px-1">
+<h3 class="font-headline-md-mobile text-headline-md-mobile leading-tight truncate">Roast &amp; Theory</h3>
+<p class="font-label-md text-label-md text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Peckham
+                    </p>
+<div class="mt-1">
+<span class="inline-block px-2 py-0.5 rounded-md bg-surface-container text-[10px] font-label-md text-text-muted uppercase tracking-wider">Roastery</span>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex flex-col gap-2 mt-2">
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-white shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
+<img class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist architectural detail of a cafe's secret courtyard entrance. Lush green vines crawl down a clean white brick wall, framing a single industrial black door. The lighting is soft ambient daylight, creating a peaceful, secluded atmosphere. The visual style is premium and observant, reflecting an urban explorer discovering a quiet sanctuary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMcl4qO2X0qSZJzrl4RHi_5wW2Qh5j2D0MI7DJK9kBWO0wHlSdHZXQLg6WLe4d72-cs95HSyZ719IMCpddA3qc-OkK-GeGEQ679zo7K84QHyTTN5uDN9yNERIrevxQcA0SpF1xJlE3duE2TDEYOvJyHWukzj0sLlJf2FFpGO2Q3Ouk8RJkMu-i-uozi7icyDiCBCbc8Jl-jHQtCm6QxN2WCJiNfxhTVX7yvyGFMfb3kXG0EZ8pRBRX7iZpQogUxYgWdFSHaFqOtnU"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-primary shadow-sm hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+<div class="px-1">
+<h3 class="font-headline-md-mobile text-headline-md-mobile leading-tight truncate">The Hidden Leaf</h3>
+<p class="font-label-md text-label-md text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Soho
+                    </p>
+<div class="mt-1">
+<span class="inline-block px-2 py-0.5 rounded-md bg-surface-container text-[10px] font-label-md text-text-muted uppercase tracking-wider">Secret Garden</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed right-6 bottom-20 w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-lg hover:brightness-110 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 600">add</span>
+</button>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface-container-lowest border-t border-border-subtle shadow-sm">
+<a class="flex flex-col items-center justify-center text-primary bg-primary-container/10 rounded-xl p-2 transition-all scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary p-2 hover:bg-secondary-container/20 rounded-full transition-all scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined">explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary p-2 hover:bg-secondary-container/20 rounded-full transition-all scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary p-2 hover:bg-secondary-container/20 rounded-full transition-all scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for the save buttons
+        document.querySelectorAll('.absolute.top-2.right-2').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const icon = btn.querySelector('.material-symbols-outlined');
+                const isFilled = icon.style.fontVariationSettings.includes("'FILL' 1");
+                icon.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+                
+                // Add a small bounce effect
+                btn.classList.add('scale-125');
+                setTimeout(() => btn.classList.remove('scale-125'), 200);
+            });
+        });
+    </script>
+</body></html>

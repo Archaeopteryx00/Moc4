@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#e60023",
+                    "surface-container": "#f0edec",
+                    "secondary": "#5e5e5d",
+                    "on-primary-container": "#fff7f6",
+                    "background": "#fcf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#f9f9f9",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#410004",
+                    "secondary-fixed-dim": "#c7c6c5",
+                    "inverse-primary": "#ffb3ad",
+                    "inverse-surface": "#313030",
+                    "surface-dim": "#dcd9d9",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-secondary-container": "#626361",
+                    "outline-variant": "#e8bcb8",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#ebe7e7",
+                    "on-secondary-fixed": "#1a1c1b",
+                    "on-surface-variant": "#5e3f3c",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "overlay-scrim": "rgba(0, 0, 0, 0.4)",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#fcf9f8",
+                    "tertiary-fixed": "#e2e2e2",
+                    "outline": "#936e6b",
+                    "on-background": "#1c1b1b",
+                    "surface-tint": "#c0001b",
+                    "border-subtle": "#EEEEEE",
+                    "primary": "#b7001a",
+                    "on-secondary-fixed-variant": "#464746",
+                    "error": "#ba1a1a",
+                    "text-muted": "#5F5F5F",
+                    "surface-container-low": "#f6f3f2",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "tertiary-container": "#717373",
+                    "surface": "#fcf9f8",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-primary-fixed-variant": "#930012",
+                    "on-surface": "#1c1b1b",
+                    "tertiary": "#595a5b",
+                    "secondary-fixed": "#e3e2e0",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "primary-fixed": "#ffdad7",
+                    "surface-variant": "#e5e2e1",
+                    "secondary-container": "#e0dfde",
+                    "on-tertiary": "#ffffff",
+                    "surface-warm": "#FAF9F7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "24px",
+                    "base": "8px",
+                    "stack-md": "12px",
+                    "section-gap": "32px",
+                    "margin-mobile": "16px",
+                    "gutter": "12px",
+                    "margin-tablet": "24px",
+                    "stack-sm": "4px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-lg": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "600"}],
+                    "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-xl": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-warm text-on-surface font-body-md antialiased">
+<!-- Top AppBar Component -->
+<header class="w-full top-0 sticky z-50 bg-surface-warm dark:bg-surface-dim shadow-sm opacity-4 flex justify-between items-center px-margin-mobile py-base">
+<div class="flex items-center gap-base">
+<button class="material-symbols-outlined text-primary scale-95 active:scale-90 transition-transform" data-icon="search">search</button>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-primary-fixed-dim">Urban Explorer</h1>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-border-subtle scale-95 active:scale-90 transition-transform">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="A professional and stylish headshot of a young urban traveler with a warm, approachable smile. The person is outdoors in a softly blurred city environment during golden hour. The lighting is high-key and cinematic, fitting a premium lifestyle app aesthetic with clean, bright tones and a minimalist feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcsdZARFDs3aXJBAt_1mcf8kzRHnsNQU2VxcPyPjRfJUqRz1EvG0yWJO0I5_BW427lM3uGtQAvI3QjZbnaZ5tZ0ZsQILsL7NONrDAZncWfHYz9G5z9MA_lMuACL-uUKfXDHdx03EhAEAUBaEkWPd7L9aROswwzmq3KqzXdAQXR77wmXJQyl168fnCodjmSDLtGekdeVewOMQ_Pkg0aJaO3pH-rLOO4l8T8t0SnfS-QQapP9wvkQWS6TvmjXakzYSQYK4K9wTiUVQE"/>
+</div>
+</header>
+<main class="px-margin-mobile pt-stack-lg pb-32 max-w-2xl mx-auto">
+<!-- Form Header -->
+<section class="mb-section-gap">
+<h2 class="font-headline-xl text-headline-xl mb-stack-sm">Add Hidden Spot</h2>
+<p class="font-body-md text-text-muted">Share your latest urban find with the community.</p>
+</section>
+<form class="space-y-section-gap" id="spotForm">
+<!-- Photo Upload Area -->
+<div class="relative group cursor-pointer">
+<div class="w-full aspect-[4/5] rounded-xl bg-surface-container-low border-2 border-dashed border-outline-variant flex flex-col items-center justify-center gap-stack-md transition-all hover:bg-surface-container-high overflow-hidden">
+<div class="flex flex-col items-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary text-[48px] mb-base" data-icon="add_a_photo">add_a_photo</span>
+<p class="font-headline-md text-headline-md">Add a photo</p>
+<p class="font-label-md text-label-md text-text-muted">High resolution vertical images work best</p>
+</div>
+<input accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer" type="file"/>
+</div>
+</div>
+<!-- Place Details -->
+<div class="space-y-stack-lg">
+<div class="space-y-base">
+<label class="font-label-md text-label-md text-primary px-1">Place Name</label>
+<input class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary rounded-xl py-4 px-stack-lg font-body-lg text-body-lg placeholder:text-text-muted/50 transition-all" placeholder="e.g., The Secret Rooftop Garden" type="text"/>
+</div>
+<div class="space-y-base">
+<label class="font-label-md text-label-md text-primary px-1">Short Description</label>
+<textarea class="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary rounded-xl py-4 px-stack-lg font-body-lg text-body-lg placeholder:text-text-muted/50 transition-all" placeholder="Tell us why this spot is special..." rows="3"></textarea>
+</div>
+</div>
+<!-- Categories -->
+<div class="space-y-stack-md">
+<label class="font-label-md text-label-md text-primary px-1">Category</label>
+<div class="flex flex-wrap gap-base">
+<button class="category-chip px-stack-lg py-base rounded-full bg-surface-container-lowest border border-border-subtle text-text-muted font-label-md text-label-md transition-all active:scale-95" onclick="toggleChip(this)" type="button">Coffee</button>
+<button class="category-chip px-stack-lg py-base rounded-full bg-surface-container-lowest border border-border-subtle text-text-muted font-label-md text-label-md transition-all active:scale-95" onclick="toggleChip(this)" type="button">Quiet</button>
+<button class="category-chip px-stack-lg py-base rounded-full bg-surface-container-lowest border border-border-subtle text-text-muted font-label-md text-label-md transition-all active:scale-95" onclick="toggleChip(this)" type="button">Architecture</button>
+<button class="category-chip px-stack-lg py-base rounded-full bg-surface-container-lowest border border-border-subtle text-text-muted font-label-md text-label-md transition-all active:scale-95" onclick="toggleChip(this)" type="button">Late Night</button>
+<button class="category-chip px-stack-lg py-base rounded-full bg-surface-container-lowest border border-border-subtle text-text-muted font-label-md text-label-md transition-all active:scale-95" onclick="toggleChip(this)" type="button">Nature</button>
+<button class="category-chip px-stack-lg py-base rounded-full bg-surface-container-lowest border border-border-subtle text-text-muted font-label-md text-label-md transition-all active:scale-95" onclick="toggleChip(this)" type="button">Art</button>
+</div>
+</div>
+<!-- Auto-location Display -->
+<div class="bg-surface-container-low p-stack-lg rounded-xl flex items-center gap-stack-lg border border-border-subtle">
+<div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="flex-1">
+<p class="font-label-sm text-label-sm text-text-muted">Detected Location</p>
+<p class="font-body-md text-body-md font-bold">Jl. Senopati No. 42, Jakarta Selatan</p>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline" type="button">Change</button>
+</div>
+<!-- Submit Button -->
+<div class="pt-base">
+<button class="w-full bg-primary-container text-on-primary-container font-headline-md text-headline-md py-stack-lg rounded-xl shadow-lg active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-base" type="submit">
+                    Bagikan Tempat
+                    <span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</form>
+</main>
+<!-- Bottom Navigation Bar Component -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-margin-mobile py-stack-md bg-surface-container-lowest dark:bg-inverse-surface border-t border-border-subtle rounded-t-xl shadow-[0_-2px_20px_rgba(0,0,0,0.06)]">
+<a class="flex flex-col items-center gap-1 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low transition-colors scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low transition-colors scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary dark:text-primary-fixed-dim scale-110 active:scale-95 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low transition-colors scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</a>
+</nav>
+<script>
+        function toggleChip(button) {
+            const isActive = button.classList.contains('bg-primary');
+            if (isActive) {
+                button.classList.remove('bg-primary', 'text-white', 'border-primary');
+                button.classList.add('bg-surface-container-lowest', 'text-text-muted', 'border-border-subtle');
+            } else {
+                button.classList.remove('bg-surface-container-lowest', 'text-text-muted', 'border-border-subtle');
+                button.classList.add('bg-primary', 'text-white', 'border-primary');
+            }
+        }
+
+        document.getElementById('spotForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Subtle success interaction
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin" data-icon="progress_activity">progress_activity</span> Sharing...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span> Shared!';
+                btn.classList.replace('bg-primary-container', 'bg-emerald-600');
+            }, 1500);
+        });
+
+        // Atmospheric parallax or hover effects can be added here if needed
+    </script>
+</body></html>

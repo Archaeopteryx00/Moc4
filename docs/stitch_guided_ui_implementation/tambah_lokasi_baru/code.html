@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Hidden Spot - Hidden Bites</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#e3e2e0",
+                    "on-primary-fixed-variant": "#930012",
+                    "on-secondary-container": "#626361",
+                    "text-muted": "#5F5F5F",
+                    "inverse-surface": "#313030",
+                    "tertiary": "#595a5b",
+                    "surface-container": "#f0edec",
+                    "on-primary-fixed": "#410004",
+                    "on-secondary-fixed-variant": "#464746",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1c1b1b",
+                    "surface-container-high": "#ebe7e7",
+                    "secondary": "#5e5e5d",
+                    "overlay-scrim": "rgba(0, 0, 0, 0.4)",
+                    "on-surface-variant": "#5e3f3c",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-tint": "#c0001b",
+                    "primary": "#b7001a",
+                    "background": "#fcf9f8",
+                    "on-tertiary-container": "#f9f9f9",
+                    "on-secondary": "#ffffff",
+                    "surface": "#fcf9f8",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "tertiary-container": "#717373",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "surface-bright": "#fcf9f8",
+                    "secondary-container": "#e0dfde",
+                    "inverse-primary": "#ffb3ad",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-warm": "#FAF9F7",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#e8bcb8",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e5e2e1",
+                    "surface-container-low": "#f6f3f2",
+                    "outline": "#936e6b",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container-lowest": "#ffffff",
+                    "border-subtle": "#EEEEEE",
+                    "primary-container": "#e60023",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-background": "#1c1b1b",
+                    "primary-fixed": "#ffdad7",
+                    "on-secondary-fixed": "#1a1c1b",
+                    "secondary-fixed-dim": "#c7c6c5",
+                    "on-primary-container": "#fff7f6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "4px",
+                    "margin-tablet": "24px",
+                    "base": "8px",
+                    "gutter": "12px",
+                    "margin-mobile": "16px",
+                    "stack-md": "12px",
+                    "stack-lg": "24px",
+                    "section-gap": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-lg": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["20px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "600"}],
+                    "headline-md-mobile": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "headline-xl": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-warm text-on-surface font-body-md min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="flex items-center justify-between px-margin-mobile w-full h-14 sticky top-0 z-50 bg-surface dark:bg-surface">
+<div class="flex items-center gap-4">
+<button class="hover:bg-surface-container-low transition-colors p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-headline-md-mobile text-headline-md-mobile text-primary dark:text-primary">Add Hidden Spot</h1>
+</div>
+<button class="hover:bg-surface-container-low transition-colors p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-text-muted">more_vert</span>
+</button>
+</header>
+<main class="px-margin-mobile mt-stack-lg max-w-md mx-auto">
+<!-- Image Upload Section -->
+<section class="mb-section-gap">
+<div class="relative aspect-[4/5] w-full rounded-xl bg-surface-container-low border-2 border-dashed border-border-subtle flex flex-col items-center justify-center cursor-pointer overflow-hidden transition-all hover:bg-surface-container-high group" id="image-dropzone">
+<div class="flex flex-col items-center group-active:scale-95 transition-transform">
+<div class="w-16 h-16 rounded-full bg-white shadow-sm flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'wght' 300;">add_a_photo</span>
+</div>
+<p class="font-headline-md text-on-surface text-center">Add a photo</p>
+<p class="text-label-md text-text-muted mt-1">Make it look delicious and inviting</p>
+</div>
+<!-- Image Placeholder Preview Overlay -->
+<img class="absolute inset-0 w-full h-full object-cover hidden" data-alt="A clean, minimalist placeholder for an uploaded image. The scene is bright and airy with high-key lighting, emphasizing negative space and modern aesthetics. The color palette is dominated by off-whites and soft grays, matching a warm humanist design system. The overall mood is professional and ready for user content to take center stage." id="preview-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbsgGwHnqHN8CxeYs8Z0Jl2mNy-FT3U8t1OWtodJqq072PUHz2FYAIFVbvWN_ucrm4YP0nZGurIwzheV9ywmd3S8hyS5NqMESTrANssJUO9WCqz5dijs5ZSWNUYtAl4b2_BAB9gY0XZpk3TZK-S__eoXzHm59t6AczAn6qNxCJZDwcZ7kR2J0z8PEm0DkCSB3G4KTW05cXxfYz0Kz7bXjyz4Qok8jlFQSovdQtqPzl02WKZX5bpwiHTc6ufuyil6498zGp5z6aBF8"/>
+</div>
+</section>
+<!-- Form Fields -->
+<div class="space-y-section-gap">
+<!-- Place Name -->
+<div class="space-y-stack-sm">
+<label class="font-label-md text-label-md text-text-muted px-1">PLACE NAME</label>
+<input class="w-full h-12 bg-surface-container-low border-none rounded-xl px-4 font-body-lg text-on-surface placeholder:text-text-muted/50 focus:ring-2 focus:ring-primary/20 transition-all outline-none" placeholder="What's this hidden gem called?" type="text"/>
+</div>
+<!-- Description -->
+<div class="space-y-stack-sm">
+<label class="font-label-md text-label-md text-text-muted px-1">SHORT DESCRIPTION</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl p-4 font-body-md text-on-surface placeholder:text-text-muted/50 focus:ring-2 focus:ring-primary/20 transition-all outline-none resize-none" placeholder="Tell us why it's special in a few words..." rows="3"></textarea>
+</div>
+<!-- Category Chips -->
+<div class="space-y-stack-md">
+<label class="font-label-md text-label-md text-text-muted px-1">CATEGORY</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full bg-primary text-white text-label-md transition-all scale-98 active:scale-95">Coffee</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface text-label-md hover:bg-surface-container-highest transition-all scale-98 active:scale-95">Bakery</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface text-label-md hover:bg-surface-container-highest transition-all scale-98 active:scale-95">Quiet Space</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface text-label-md hover:bg-surface-container-highest transition-all scale-98 active:scale-95">Late Night</button>
+<button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface text-label-md hover:bg-surface-container-highest transition-all scale-98 active:scale-95">Street Food</button>
+<button class="px-2 py-2 rounded-full border border-border-subtle text-text-muted flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+<!-- Location -->
+<div class="space-y-stack-sm">
+<label class="font-label-md text-label-md text-text-muted px-1">LOCATION</label>
+<div class="relative group">
+<input class="w-full h-12 bg-surface-container-low border-none rounded-xl pl-10 pr-4 font-body-md text-on-surface cursor-default transition-all outline-none" readonly="" type="text" value="Jl. Senopati No. 12, Jakarta Selatan"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary text-xl">location_on</span>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-label-sm text-primary font-bold hover:underline">Change</button>
+</div>
+<p class="text-label-sm text-text-muted px-1">Auto-detected from your current position</p>
+</div>
+<!-- Submit Button -->
+<div class="pt-stack-lg pb-10">
+<button class="w-full h-14 bg-primary text-white font-headline-md rounded-xl shadow-lg shadow-primary/10 hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span>Bagikan Tempat</span>
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface-container-lowest shadow-sm border-t border-border-subtle">
+<button class="flex flex-col items-center justify-center text-secondary p-2 hover:bg-secondary-container/20 rounded-full transition-all scale-98 active:scale-95">
+<span class="material-symbols-outlined">home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary p-2 hover:bg-secondary-container/20 rounded-full transition-all scale-98 active:scale-95">
+<span class="material-symbols-outlined">explore</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary bg-primary-container/10 rounded-xl p-2 transition-all scale-98 active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary p-2 hover:bg-secondary-container/20 rounded-full transition-all scale-98 active:scale-95">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</nav>
+<script>
+        // Simple Interaction logic
+        const dropzone = document.getElementById('image-dropzone');
+        const preview = document.getElementById('preview-img');
+        const labels = dropzone.querySelector('div');
+
+        dropzone.addEventListener('click', () => {
+            // Simulated upload behavior
+            preview.classList.toggle('hidden');
+            labels.classList.toggle('hidden');
+        });
+
+        const categoryButtons = document.querySelectorAll('.flex-wrap button:not(:last-child)');
+        categoryButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoryButtons.forEach(b => {
+                    b.className = "px-4 py-2 rounded-full bg-surface-container-high text-on-surface text-label-md hover:bg-surface-container-highest transition-all scale-98 active:scale-95";
+                });
+                btn.className = "px-4 py-2 rounded-full bg-primary text-white text-label-md transition-all scale-98 active:scale-95";
+            });
+        });
+    </script>
+</body></html>

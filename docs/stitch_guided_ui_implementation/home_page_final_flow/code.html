@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hidden Bites | Urban Explorer Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#b7001a",
+                        "on-primary-fixed-variant": "#930012",
+                        "tertiary": "#595a5b",
+                        "surface-container": "#f0edec",
+                        "on-surface-variant": "#5e3f3c",
+                        "on-primary-container": "#fff7f6",
+                        "secondary": "#5e5e5d",
+                        "overlay-scrim": "rgba(0, 0, 0, 0.4)",
+                        "primary-container": "#e60023",
+                        "on-secondary-container": "#626361",
+                        "secondary-fixed": "#e3e2e0",
+                        "inverse-surface": "#313030",
+                        "on-background": "#1c1b1b",
+                        "surface-container-high": "#ebe7e7",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#c7c6c5",
+                        "on-primary-fixed": "#410004",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "tertiary-container": "#717373",
+                        "on-tertiary-container": "#f9f9f9",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-tint": "#c0001b",
+                        "error": "#ba1a1a",
+                        "border-subtle": "#EEEEEE",
+                        "error-container": "#ffdad6",
+                        "background": "#fcf9f8",
+                        "on-secondary-fixed": "#1a1c1b",
+                        "secondary-container": "#e0dfde",
+                        "primary-fixed": "#ffdad7",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "outline-variant": "#e8bcb8",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "on-secondary-fixed-variant": "#464746",
+                        "text-muted": "#5F5F5F",
+                        "inverse-primary": "#ffb3ad",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#ffb3ad",
+                        "on-surface": "#1c1b1b",
+                        "on-error": "#ffffff",
+                        "surface-warm": "#FAF9F7",
+                        "outline": "#936e6b",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface": "#fcf9f8",
+                        "surface-container-low": "#f6f3f2",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#fcf9f8",
+                        "surface-variant": "#e5e2e1",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "12px",
+                        "gutter": "12px",
+                        "section-gap": "32px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "4px",
+                        "stack-lg": "24px",
+                        "margin-tablet": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-warm min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile py-base bg-surface dark:bg-surface-dim transition-all duration-300" id="main-header">
+<div class="flex items-center gap-stack-md">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-low transition-colors active:scale-95">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+<h1 class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-container tracking-tight">Hidden Bites</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border border-border-subtle cursor-pointer active:scale-95 transition-transform">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional close-up headshot of a stylish young adult with a friendly expression. The lighting is soft and natural, emphasizing a high-end, clean lifestyle aesthetic. The background is a blurred urban cafe setting with warm wood tones and soft highlights, matching the warm minimalist UI theme of the application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYegFlmvSc5T_s5asO0xZkVINSr7S3UCUXkgeaIZMgdB_yvQDATt0Ra69iYVZgCnGLhxVJUb7w8Aa2jwylUTo73J2bXK_fG0dky9qMusKPe6YotlokKl6eixFjjvaPEWYNLsrcPPevm4PTyeTAkYtvTEhfd45o2cTMPqrDNzTDft7-KuSyMt3PRpiDTqBUpG06a3lbP3h23GNXCytBXSVU6ie0NvQxB6FNYP2dp7LIdlcRRZ_6p0NZ_uNtYAU_pSgfhyi03K1OAIo"/>
+</div>
+</header>
+<main class="mt-20 px-margin-mobile">
+<!-- Search Bar Section -->
+<section class="mb-stack-lg">
+<div class="relative group cursor-pointer">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-text-muted">search</span>
+<input class="w-full h-12 pl-12 pr-4 bg-surface-container-low border-none rounded-xl font-body-md text-on-surface focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-text-muted/60" placeholder="Cari hidden gems terdekat..." type="text"/>
+</div>
+</section>
+<!-- Category Chips -->
+<section class="mb-stack-lg overflow-x-auto hide-scrollbar -mx-margin-mobile px-margin-mobile">
+<div class="flex gap-base whitespace-nowrap">
+<button class="px-5 py-2 rounded-full bg-primary text-on-primary font-label-md transition-transform active:scale-95 cursor-pointer">Semua</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-text-muted font-label-md hover:bg-surface-container-high transition-all active:scale-95 cursor-pointer">Kopi</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-text-muted font-label-md hover:bg-surface-container-high transition-all active:scale-95 cursor-pointer">Makan Siang</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-text-muted font-label-md hover:bg-surface-container-high transition-all active:scale-95 cursor-pointer">Hidden Gems</button>
+<button class="px-5 py-2 rounded-full bg-surface-container text-text-muted font-label-md hover:bg-surface-container-high transition-all active:scale-95 cursor-pointer">Pasar Malam</button>
+</div>
+</section>
+<!-- Pinterest-style Feed -->
+<section class="masonry-grid" id="feed-container">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_0_rgba(0,0,0,0.04)] group animate-fade-in">
+<div class="relative aspect-[4/5] overflow-hidden">
+<img alt="Rustic Coffee Shop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A moody, high-contrast interior of a minimalist Japanese-style coffee shop. Sunlight streams through a narrow window, highlighting steam rising from a ceramic cup on a dark wood table. The aesthetic is sophisticated and quiet, with a warm color temperature and clean architectural lines that align with the brand's urban explorer identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh2NpRJKh-7MvYW--r2ErgAiTr3eVVavuS2NN4gNdOdNzPypMGkbC98StyRgNLA_eXAjSELKjT11J8DtWPKOCpabsFB99V2xzHrFRpJ8MJpGOXfZmGM27F_W5_wB2UQzJ4JTGnd0UX03JWLymJJ1RqhSqg8Pn_mJA-ks_5GzhlExzvS-I0wMoPVpqUoOa7p0ymuzniAjZIafYUXs9KJ1-ivPynVK1x13cGuk5JHuuJec2vBUscjgKE46LnVWOSlwRESbj1WMXNkM0"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-primary shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="font-headline-md text-[16px] leading-tight mb-1 line-clamp-1">Kopi Tuku Kebayoran</h3>
+<div class="flex items-center gap-1 text-text-muted mb-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span class="text-label-sm">Jakarta Selatan</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-bold">4.8</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_0_rgba(0,0,0,0.04)] group">
+<div class="relative aspect-square overflow-hidden">
+<img alt="Plated Brunch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An overhead shot of a beautifully plated artisanal brunch featuring avocado toast and poached eggs on a marble table. The lighting is bright and airy, typical of a high-end lifestyle magazine. The color palette is fresh with greens and warm bread tones, emphasizing the 'Bites' aspect of the brand in a realistic, premium style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1jVtPk331IhEliv7LYFUA5sAiVyJKVCPjwtkh8cAMyvb-4xadAWNd3MIa8BAFzuB3_SOcmInRyuvQrN5S7YpcCAMT1WyXIFC0v82c4QlnMkVgHbTBh0bwBdjgkzYtfXINXOQJm_jyHL9hYRCwps0YZnnXXprIf2_TPCIva6zu0YVdSPde6SVhTrcWhg73Qyfnd7aguw0Mm6-tic5cj3CgA87qdvyDBXYv-GJkigdknZ7nc0MyuJE-QG2G_htUSSqtMNCjG0qc41M"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-text-muted shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="font-headline-md text-[16px] leading-tight mb-1 line-clamp-1">Brunch at Noon</h3>
+<div class="flex items-center gap-1 text-text-muted mb-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span class="text-label-sm">Bandung</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-bold">4.5</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_0_rgba(0,0,0,0.04)] group">
+<div class="relative aspect-[3/4] overflow-hidden">
+<img alt="Donut Shop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A vibrant and colorful close-up of gourmet glazed donuts displayed in a modern, neon-lit bakery case at night. The lighting creates a soft cinematic glow with deep shadows, capturing the 'hidden gem' mystery. The image is sharp and premium, showcasing rich textures and deep primary red accents from the shop's branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJYrGcUXVILshkKkBRVeoN26F-6Pk6Mh17mR_omb5AmbG-0Tx5NjK16kAMMLOKneAWJM59LpkEYM7UpuFBy_A4vStETCq6qMClZJQuwpxXnMdVmurQD_CRf9ojSyTorZwtO6dkaCXMPLCQTcD5wdXw1lv1nVf5i5sr59wmP59bfNU_Y-dxBSPo9fmn9eOc1SOfr_4n3C5Bs8Mnha3p8eZpPUX_64QJtYEfsN5XRpKvgkUcZyLeIDswwG5C49ObVY6Aa0Np3QNx2iE"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-text-muted shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="font-headline-md text-[16px] leading-tight mb-1 line-clamp-1">Luna's Doughnuts</h3>
+<div class="flex items-center gap-1 text-text-muted mb-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span class="text-label-sm">Semarang</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-bold">4.9</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_0_rgba(0,0,0,0.04)] group">
+<div class="relative aspect-[4/5] overflow-hidden">
+<img alt="Modern Restaurant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A wide-angle interior of a sophisticated urban restaurant with industrial ceilings and warm ambient lighting. Large floor-to-ceiling windows look out onto a bustling city street at twilight. The mood is upscale yet accessible, featuring a refined palette of warm grays, deep reds, and natural wood, embodying the visual storytelling of an explorer's guide." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVUzXEXAjOgHuL0lSi8sucINI7aplZFeHDEU9YUTOWh5ArVUX4yDGUS6NTDwj4Iys7dAdV-U2B5OaV2vli6L9wo8RxOTupdwtCv4klCaVjPIp3lFm4LFUDBQXS6Myq8CbPcqzMnuLG_K2ue4ND04cd7I31w39HEcegdC4_uYXw3i68nsgzScYkzdjcvPmGiob7RIJ19FR0_2P5ARVu42qGB4_IwGFATTLxEy4cjLCnRgiOvxUsXuR78yLWSfajnYE8o681INYdedc"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-text-muted shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h3 class="font-headline-md text-[16px] leading-tight mb-1 line-clamp-1">The Industrial Table</h3>
+<div class="flex items-center gap-1 text-text-muted mb-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span class="text-label-sm">Jakarta Pusat</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-bold">4.7</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button -->
+<a class="fixed bottom-24 right-6 w-14 h-14 rounded-full bg-primary text-on-primary shadow-lg flex items-center justify-center active:scale-90 transition-transform z-40" href="{{DATA:SCREEN:SCREEN_3}}">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</a>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 pb-safe bg-surface-container-lowest dark:bg-inverse-surface shadow-[0_-2px_20px_0_rgba(0,0,0,0.06)] rounded-t-xl transition-all duration-300">
+<!-- Home (Active) -->
+<a class="flex items-center justify-center text-primary dark:text-primary-container active:scale-90 transition-transform duration-200" href="{{DATA:SCREEN:SCREEN_12}}">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<!-- Explore -->
+<a class="flex items-center justify-center text-text-muted dark:text-on-secondary-fixed-variant hover:opacity-80 active:scale-90 transition-all duration-200" href="{{DATA:SCREEN:SCREEN_10}}">
+<span class="material-symbols-outlined text-[28px]">explore</span>
+</a>
+<!-- Favorite -->
+<a class="flex items-center justify-center text-text-muted dark:text-on-secondary-fixed-variant hover:opacity-80 active:scale-90 transition-all duration-200" href="{{DATA:SCREEN:SCREEN_5}}">
+<span class="material-symbols-outlined text-[28px]">favorite</span>
+</a>
+<!-- Profile -->
+<a class="flex items-center justify-center text-text-muted dark:text-on-secondary-fixed-variant hover:opacity-80 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-[28px]">person</span>
+</a>
+</nav>
+<script>
+        // Subtle scroll behavior for header
+        let lastScroll = 0;
+        const header = document.getElementById('main-header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                header.classList.remove('shadow-sm');
+                return;
+            }
+            if (currentScroll > lastScroll) {
+                // Scroll Down
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scroll Up
+                header.style.transform = 'translateY(0)';
+                header.classList.add('shadow-sm');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Add micro-interaction for chips
+        const chips = document.querySelectorAll('button.rounded-full');
+        chips.forEach(chip => {
+            chip.addEventListener('click', function() {
+                if (this.classList.contains('bg-primary')) return;
+                
+                // Toggle active state (simplified for demo)
+                chips.forEach(c => {
+                    c.classList.remove('bg-primary', 'text-on-primary');
+                    c.classList.add('bg-surface-container', 'text-text-muted');
+                });
+                this.classList.remove('bg-surface-container', 'text-text-muted');
+                this.classList.add('bg-primary', 'text-on-primary');
+            });
+        });
+
+        // Masonry simulation with scale entrance
+        const cards = document.querySelectorAll('.masonry-grid > div');
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                card.style.transition = 'all 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    </script>
+</body></html>

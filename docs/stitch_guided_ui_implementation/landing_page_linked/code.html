@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hidden Bites | Temukan Hidden Gems di Sekitarmu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#b7001a",
+                    "on-primary-fixed-variant": "#930012",
+                    "tertiary": "#595a5b",
+                    "surface-container": "#f0edec",
+                    "on-surface-variant": "#5e3f3c",
+                    "on-primary-container": "#fff7f6",
+                    "secondary": "#5e5e5d",
+                    "overlay-scrim": "rgba(0, 0, 0, 0.4)",
+                    "primary-container": "#e60023",
+                    "on-secondary-container": "#626361",
+                    "secondary-fixed": "#e3e2e0",
+                    "inverse-surface": "#313030",
+                    "on-background": "#1c1b1b",
+                    "surface-container-high": "#ebe7e7",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#c7c6c5",
+                    "on-primary-fixed": "#410004",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "tertiary-container": "#717373",
+                    "on-tertiary-container": "#f9f9f9",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-tint": "#c0001b",
+                    "error": "#ba1a1a",
+                    "border-subtle": "#EEEEEE",
+                    "error-container": "#ffdad6",
+                    "background": "#fcf9f8",
+                    "on-secondary-fixed": "#1a1c1b",
+                    "secondary-container": "#e0dfde",
+                    "primary-fixed": "#ffdad7",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "outline-variant": "#e8bcb8",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#dcd9d9",
+                    "on-secondary-fixed-variant": "#464746",
+                    "text-muted": "#5F5F5F",
+                    "inverse-primary": "#ffb3ad",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "on-surface": "#1c1b1b",
+                    "on-error": "#ffffff",
+                    "surface-warm": "#FAF9F7",
+                    "outline": "#936e6b",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#fcf9f8",
+                    "surface-variant": "#e5e2e1",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "12px",
+                    "gutter": "12px",
+                    "section-gap": "32px",
+                    "margin-mobile": "16px",
+                    "stack-sm": "4px",
+                    "stack-lg": "24px",
+                    "margin-tablet": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-xl": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-warm text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile py-base bg-surface dark:bg-surface-dim">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-container">Hidden Bites</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low transition-colors px-4 py-2 rounded-full">Masuk</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIUmzci5kNWmtdBoHMUYbyRyfnVq8CF0z7xdHuIwLzbSLlxbrYB33625hZRt5Moeo8BYdp8rPnQU3dR8RTSqnWbQav_8ig2A-Js_PXvmtpJQq8H-J5fP41HtNsXYyW16ItZQJA6ylUD4OOReqEz2UXwSDHiiLyLTs4sQ7vciuqXe8E_aVBwutQsyjuBr2lkhwsaUjzPgORtr7V-mdtU-rCG9k2jndAuLhuaEstASxH7kElzo7k7tKcn2FwGeWFIwd168hUvqZ_Y_M"/>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<main class="pt-24 pb-12">
+<section class="px-margin-mobile md:px-margin-tablet max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-stack-lg">
+<div class="flex-1 text-left order-2 md:order-1">
+<h1 class="font-headline-xl text-headline-xl text-on-background mb-stack-md">Temukan Hidden Gems di Sekitarmu</h1>
+<p class="font-body-lg text-body-lg text-text-muted mb-stack-lg max-w-lg">
+                    Cari dan temukan tempat makan yang underrated namun memiliki cita rasa luar biasa. Komunitas kami membantu Anda menemukan sudut-sudut rahasia kota yang tak pernah Anda duga sebelumnya.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary text-on-primary font-headline-md text-headline-md px-stack-lg py-4 rounded-xl active:scale-95 transition-all shadow-sm hover:opacity-90 flex items-center justify-center text-center" href="screen_12">
+                        Mulai Menjelajah
+                    </a>
+<a class="border border-border-subtle text-on-surface font-headline-md text-headline-md px-stack-lg py-4 rounded-xl active:scale-95 transition-all hover:bg-surface-container-low flex items-center justify-center text-center" href="screen_login">
+                        Masuk
+                    </a>
+</div>
+</div>
+<div class="flex-1 w-full order-1 md:order-2">
+<div class="relative rounded-[24px] overflow-hidden shadow-2xl">
+<img class="w-full aspect-[4/3] md:aspect-[1/1] object-cover" data-alt="A cozy, sun-drenched hidden cafe with warm wooden furniture and lush green plants hanging from the ceiling. The atmosphere is intimate and quiet, with soft natural light streaming through a large window, highlighting the minimalist white walls and red decorative accents. The photography style is realistic and premium, following a warm humanist aesthetic that feels like a spread in a high-end lifestyle magazine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1Ktmn850lVMbbO7Pn41UVq3eCliBN2uF83IoYht-V7NfBEgLsvCkbLC1nDrd2P-MaX2Fz0k03ZnKoWJhzBq_3Kh231-WHGN5pWzTkgyZ-J9kCXW6G9gXFOlmKi6kcY_P00IT0vJAo9Bp1XGJbEEY8YPph_iL39g46gLenbdjSDcjEfV2aqwglftKsC1Nwze2nj5-SDNwJFt7QhxEjSXqHmnJCwpux2_7pBIAr35Z3i9cz69Chm2hZn13UOUUqG1B5LyrIl4AWuUE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="font-label-md text-label-md opacity-80 uppercase tracking-widest mb-1">Spot Minggu Ini</p>
+<h3 class="font-headline-lg text-headline-lg">Arum Manis Coffee Bar</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Pills -->
+<section class="mt-section-gap px-margin-mobile overflow-x-auto no-scrollbar">
+<div class="flex gap-stack-md pb-4">
+<div class="px-5 py-2 bg-primary text-on-primary rounded-full font-label-md text-label-md whitespace-nowrap cursor-pointer">Semua</div>
+<div class="px-5 py-2 bg-surface-container-low border border-border-subtle text-text-muted rounded-full font-label-md text-label-md whitespace-nowrap cursor-pointer hover:bg-surface-container-high transition-colors">Kedai Kopi</div>
+<div class="px-5 py-2 bg-surface-container-low border border-border-subtle text-text-muted rounded-full font-label-md text-label-md whitespace-nowrap cursor-pointer hover:bg-surface-container-high transition-colors">Warung Lokal</div>
+<div class="px-5 py-2 bg-surface-container-low border border-border-subtle text-text-muted rounded-full font-label-md text-label-md whitespace-nowrap cursor-pointer hover:bg-surface-container-high transition-colors">Toko Roti</div>
+<div class="px-5 py-2 bg-surface-container-low border border-border-subtle text-text-muted rounded-full font-label-md text-label-md whitespace-nowrap cursor-pointer hover:bg-surface-container-high transition-colors">Sore Hari</div>
+<div class="px-5 py-2 bg-surface-container-low border border-border-subtle text-text-muted rounded-full font-label-md text-label-md whitespace-nowrap cursor-pointer hover:bg-surface-container-high transition-colors">Buka Larut</div>
+</div>
+</section>
+<!-- Masonry Content Feed -->
+<section class="px-margin-mobile md:px-margin-tablet max-w-7xl mx-auto mt-stack-lg">
+<div class="masonry-grid">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.04)] group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative aspect-[4/5]">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of a perfectly crafted latte with intricate foam art on a minimalist marble table in a boutique cafe. The lighting is soft and golden, creating a warm, inviting mood. The background is slightly blurred, showing hints of a clean, minimalist interior with warm wood and red accents, characteristic of a premium urban lifestyle app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDikYMZ-MTQXi_ScDZrHjf9zdtsL6TUT3k153j0jxSSoU69_IVsfczM1j48USjgoNy0yt117WCorNx1HEguTrTDyh1ri3fHBCrjW0rcKopIBrKqsftOgtvPcis9qVihHlx8fcFLL3OD6ZIjnAp4x_FM50MyQtYHQomUiyJAgOydQHQoYjnEvt0e1D9lC_CfBDvr2bnz0dZLfzlGzhdqWA96ycDjIk5M7RGyMENRSME27oh06bVFHucA37T1WY2EuDz5Lmbjy7HTuEg"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h4 class="font-headline-md text-label-md text-on-surface truncate">The Lab Coffee Studio</h4>
+<p class="text-text-muted text-label-sm mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Jakarta Selatan
+                        </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.04)] group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative aspect-[1/1]">
+<img class="w-full h-full object-cover" data-alt="A rustic ceramic bowl of spicy Indonesian noodles served on a textured wooden table in a dimly lit, authentic eatery. The scene captures the rich textures and deep colors of the food, highlighted by a focused spotlight. The atmosphere is warm and intimate, with a refined minimalist aesthetic that focuses on the sensory details of the meal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCThiISksHsvrT0cRjQkAB1_-lIjCEkbBbjTZKecLZYKLvqJ3E9rPjYnO1LgiCt-_gPim5HMv1eK9E2y4YDXSZvIW9hw65lsYZlEEK2e4AIMKG5JnsEA3Z0V8xw27vvPdTKlVx4C8K4z1m5XIBGhiQgRmASFJRN-_ltndvxnEhh7fwP5yUMddXJMrw_H-FdV7u1GQIaO_qjOrptcyBO3cZFcRo6kat8wRZ8rYZVbOWeNoX987-SjSaZllBgx1pLVJZ65Ww4PLonu-M"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h4 class="font-headline-md text-label-md text-on-surface truncate">Mie Ayam Bangka Rahasia</h4>
+<p class="text-text-muted text-label-sm mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Tebet
+                        </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.04)] group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative aspect-[4/5]">
+<img class="w-full h-full object-cover" data-alt="An atmospheric photograph of a small, minimalist bakery interior with rows of golden-brown croissants displayed on clean white surfaces. The design features soft tonal layering and elegant typography in the background. The lighting is airy and bright, emphasizing a high-end, contemporary vibe with subtle red brand accents throughout the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ7jUgL9IAkKoTgYsXA_qpETYhcp4YGNjgw1Q884CYc3I-gWnUJjgeZW2RmMxda9hONjelAmEvtMRDG75Lw-XqK5T0ejRl1h0_2F4IYAStpMh1zc9MRZ-304FjNq160fZ1Jj1ArUHN8fU-yw5egueNVvAH3qa1DSMi1JvDh3OGYgeNFyl8zwOFgxAEQ_3cvZ_mJgvobl7G6HTbX9TU8l2zPTZqLD2W6zw_e6SJrpceZ8deCOXoOu3tZxpXDqFLOpfyuS0IniRsIXA"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h4 class="font-headline-md text-label-md text-on-surface truncate">Petit Paris Boulangerie</h4>
+<p class="text-text-muted text-label-sm mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Kemang
+                        </p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.04)] group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+<div class="relative aspect-[1/1]">
+<img class="w-full h-full object-cover" data-alt="A beautifully plated gourmet breakfast dish featuring avocado toast and poached eggs on a minimalist plate. The setting is a clean, modern cafe with lots of white space and natural textures. The color palette is composed of fresh greens, warm whites, and a single accent of deep red, following the visual storytelling for urban explorers brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFaGIcrP5klnF5p-sd08wpCUEloRmy1OGrgeEvHKb7qPlcITjBBqOMDeFvSHSD-DWGNOFmqHkpbvlUbVFISefDHlVxFBgWSCuVnt8TsD1Q8kcj_d8krP_1NwqGyNUNCkGJvViIHhKl1Q6sOk0XOSV5dcaAN7ZycO-6VCO_VKygnid_D5149bDV_oYhWMnSJQwUvRsELNc9Vs1v1LrVwzn2MrNFkbPvWBJShVC64ADRPcvcQ39n0D5aleD8fwcPYc8kQWDn87-RBj4"/>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-3">
+<h4 class="font-headline-md text-label-md text-on-surface truncate">Hidden Garden Brunch</h4>
+<p class="text-text-muted text-label-sm mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Menteng
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB -->
+<button class="fixed bottom-20 right-margin-mobile w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined" style="font-size: 32px;">add</span>
+</button>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 pb-safe bg-surface-container-lowest dark:bg-inverse-surface rounded-t-xl shadow-[0_-2px_20px_0_rgba(0,0,0,0.06)] border-t border-border-subtle dark:border-outline-variant">
+<a class="flex items-center justify-center text-primary dark:text-primary-container active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-weight="fill">home</span>
+</a>
+<a class="flex items-center justify-center text-text-muted dark:text-on-secondary-fixed-variant active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">explore</span>
+</a>
+<a class="flex items-center justify-center text-text-muted dark:text-on-secondary-fixed-variant active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">favorite</span>
+</a>
+<a class="flex items-center justify-center text-text-muted dark:text-on-secondary-fixed-variant active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for active state on bottom nav
+        const navItems = document.querySelectorAll('nav a');
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                navItems.forEach(i => {
+                    i.classList.remove('text-primary');
+                    i.classList.add('text-text-muted');
+                    const span = i.querySelector('span');
+                    span.style.fontVariationSettings = "'FILL' 0";
+                });
+                item.classList.add('text-primary');
+                item.classList.remove('text-text-muted');
+                const activeSpan = item.querySelector('span');
+                activeSpan.style.fontVariationSettings = "'FILL' 1";
+            });
+        });
+
+        // Search bar focus effect simulation
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(btn => {
+            btn.addEventListener('touchstart', () => btn.classList.add('scale-95'));
+            btn.addEventListener('touchend', () => btn.classList.remove('scale-95'));
+        });
+    </script>
+</body></html>

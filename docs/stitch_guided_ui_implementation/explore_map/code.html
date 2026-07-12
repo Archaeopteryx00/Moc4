@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#e60023",
+                    "surface-container": "#f0edec",
+                    "secondary": "#5e5e5d",
+                    "on-primary-container": "#fff7f6",
+                    "background": "#fcf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#f9f9f9",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#410004",
+                    "secondary-fixed-dim": "#c7c6c5",
+                    "inverse-primary": "#ffb3ad",
+                    "inverse-surface": "#313030",
+                    "surface-dim": "#dcd9d9",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-secondary-container": "#626361",
+                    "outline-variant": "#e8bcb8",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#ebe7e7",
+                    "on-secondary-fixed": "#1a1c1b",
+                    "on-surface-variant": "#5e3f3c",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "overlay-scrim": "rgba(0, 0, 0, 0.4)",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#fcf9f8",
+                    "tertiary-fixed": "#e2e2e2",
+                    "outline": "#936e6b",
+                    "on-background": "#1c1b1b",
+                    "surface-tint": "#c0001b",
+                    "border-subtle": "#EEEEEE",
+                    "primary": "#b7001a",
+                    "on-secondary-fixed-variant": "#464746",
+                    "error": "#ba1a1a",
+                    "text-muted": "#5F5F5F",
+                    "surface-container-low": "#f6f3f2",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "tertiary-container": "#717373",
+                    "surface": "#fcf9f8",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-primary-fixed-variant": "#930012",
+                    "on-surface": "#1c1b1b",
+                    "tertiary": "#595a5b",
+                    "secondary-fixed": "#e3e2e0",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "primary-fixed": "#ffdad7",
+                    "surface-variant": "#e5e2e1",
+                    "secondary-container": "#e0dfde",
+                    "on-tertiary": "#ffffff",
+                    "surface-warm": "#FAF9F7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "24px",
+                    "base": "8px",
+                    "stack-md": "12px",
+                    "section-gap": "32px",
+                    "margin-mobile": "16px",
+                    "gutter": "12px",
+                    "margin-tablet": "24px",
+                    "stack-sm": "4px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-lg": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "600"}],
+                    "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-xl": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .map-container {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+        .marker-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-warm font-body-md text-on-surface overflow-hidden h-screen flex flex-col">
+<!-- Top Navigation Placeholder (Hidden for Full Screen Map Experience) -->
+<header class="w-full top-0 sticky bg-surface-warm dark:bg-surface-dim shadow-sm z-30 flex justify-between items-center px-margin-mobile py-base">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-primary-fixed-dim">Urban Explorer</h1>
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a friendly young man with a warm smile, set against a soft-focus urban background. The lighting is bright and natural, reflecting a modern, high-key lifestyle aesthetic consistent with premium app design. The overall mood is approachable and polished." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZSSvTWRp7OmyQIRUwxz2iQk_fyx0S_2uwwbUdxd9GrqENj5PZOIydCZcs8TRpR1ID1qJw_gVU-4qr3AhnPw0Yys-XUJvVz9fUk_8BcOUUOnMEApSVMtU6gpejXuER4r3yJhh120oiNcPY12NWrTEzCr55bvOeZTd-hfNrc0cfYLFIyojVbMSRge0I36j7m8J-cg-yhyHuosQgfBSvJYlicqmXXSPewiugN1a3CFajVoO_vxsnpho5tsrDUqfY0c8k_56Bk3AekFY"/>
+</div>
+</header>
+<!-- Main Canvas: Full Screen Map -->
+<main class="relative flex-1 w-full overflow-hidden">
+<!-- Map Background -->
+<div class="absolute inset-0 z-0 bg-[#e0dfde]">
+<img alt="Tokyo Map" class="w-full h-full object-cover grayscale-[0.2] contrast-[0.9] brightness-[1.05]" data-location="Tokyo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ6CnJhPAlVBBrgwG2O9jHBOIFiTp5miss0i9FHPnkr-1cUIpjjVQLEX0sK1QAXry8z7i7mxhzZsqzgCL4tWm93cmsJiJ-ZrakxjSxQJWSJbTjKDfNppng3HXcY5iG7InbCJoMSVtEM8LWDdcjiK_fhf6keYlbhgVrXfUhiZDO35H915waf4kMp8Jcjj_neOjRNsVQaeOCfcGyCa5ZILK4EjHDfmAz-EswGevUviUf2skj_k7i19RUK5T3taZuX2Q4w3PIJjOL4bw"/>
+<!-- Custom Markers -->
+<!-- Marker 1: Active Focus (Kissa Mitsu) -->
+<div class="absolute top-[45%] left-[52%] -translate-x-1/2 -translate-y-1/2 z-10">
+<div class="relative flex items-center justify-center">
+<div class="absolute w-12 h-12 bg-primary/20 rounded-full marker-pulse"></div>
+<div class="w-8 h-8 bg-primary rounded-full border-2 border-white shadow-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+</div>
+</div>
+<!-- Marker 2: Secondary Spot -->
+<div class="absolute top-[30%] left-[25%] -translate-x-1/2 -translate-y-1/2 z-0">
+<div class="w-6 h-6 bg-white rounded-full border border-border-subtle shadow-sm flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[14px]">local_cafe</span>
+</div>
+</div>
+<!-- Marker 3: Secondary Spot -->
+<div class="absolute top-[65%] left-[70%] -translate-x-1/2 -translate-y-1/2 z-0">
+<div class="w-6 h-6 bg-white rounded-full border border-border-subtle shadow-sm flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[14px]">park</span>
+</div>
+</div>
+<!-- Marker 4: Secondary Spot -->
+<div class="absolute top-[20%] left-[80%] -translate-x-1/2 -translate-y-1/2 z-0">
+<div class="w-6 h-6 bg-white rounded-full border border-border-subtle shadow-sm flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[14px]">shopping_bag</span>
+</div>
+</div>
+</div>
+<!-- Floating Search Bar -->
+<div class="absolute top-margin-mobile inset-x-margin-mobile z-20">
+<div class="bg-surface-container-lowest/90 backdrop-blur-md rounded-xl shadow-sm border border-border-subtle flex items-center px-4 py-3 gap-3 transition-all hover:shadow-md">
+<span class="material-symbols-outlined text-text-muted">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-body-md font-body-md placeholder-text-muted" placeholder="Find a hidden bite..." type="text"/>
+<span class="material-symbols-outlined text-text-muted">tune</span>
+</div>
+<!-- Quick Chips -->
+<div class="flex gap-2 mt-3 overflow-x-auto hide-scrollbar pb-2">
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-primary text-white font-label-md text-label-md shadow-sm">Coffee Shops</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-surface-container-lowest border border-border-subtle text-text-muted font-label-md text-label-md shadow-sm">Jazz Bars</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-surface-container-lowest border border-border-subtle text-text-muted font-label-md text-label-md shadow-sm">Late Night</button>
+<button class="whitespace-nowrap px-4 py-1.5 rounded-full bg-surface-container-lowest border border-border-subtle text-text-muted font-label-md text-label-md shadow-sm">Quiet</button>
+</div>
+</div>
+<!-- Bottom Preview Card (Sliding) -->
+<div class="absolute bottom-[80px] inset-x-margin-mobile z-20">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] border border-border-subtle p-3 flex gap-4 transition-transform active:scale-[0.98]">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Intimate interior of a Japanese-style jazz kissa with warm wood textures, dim amber lighting, and shelves full of vinyl records. A steaming cup of coffee sits on a polished counter. The mood is nostalgic, quiet, and deeply atmospheric, using rich browns and soft golden highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLOkRBfhQbPJ2hLNm3QSQCzD6CQYTJjX_uTTyxVIC7sIh_AWBlv7DBjYKm4M4yzAaR2NxDqTmI06ML5HojT1yP8-3tNjKsRLC1APdqSrU1xx5W_DzvAfKMLU8jbYprbAbQ7p0c45KBLsuO7URtiDX3oGdZtFtALUApj8Axvl3vhJD9v7itFcJOPg03NgDYKsm1Y-oGjlk5BOmUaXFuZVdLoH7uIWNrZxN96s0c7YY-8BigekJF88-4MipvR6n6aMQu4CEU_SI9KO0"/>
+</div>
+<div class="flex flex-col justify-between py-1 flex-1">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-headline-md-mobile text-on-surface">Kissa Mitsu</h3>
+<button class="text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+</div>
+<p class="text-text-muted text-body-md mt-0.5">Coffee &amp; Jazz</p>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.9</span>
+<span class="text-label-sm text-text-muted">(124 reviews)</span>
+</div>
+<span class="text-label-sm text-text-muted">400m away</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-margin-mobile z-30 w-14 h-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-margin-mobile py-stack-md bg-surface-container-lowest dark:bg-inverse-surface border-t border-border-subtle shadow-[0_-2px_20px_rgba(0,0,0,0.06)] rounded-t-xl">
+<!-- Home -->
+<a class="flex flex-col items-center gap-1 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-secondary-container transition-colors p-2 rounded-lg scale-98 active:scale-95 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</a>
+<!-- Explore (ACTIVE) -->
+<a class="flex flex-col items-center gap-1 text-primary dark:text-primary-fixed-dim scale-110 hover:bg-surface-container-low dark:hover:bg-secondary-container transition-colors p-2 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+</a>
+<!-- Add -->
+<a class="flex flex-col items-center gap-1 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-secondary-container transition-colors p-2 rounded-lg scale-98 active:scale-95 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+</a>
+<!-- Favorite -->
+<a class="flex flex-col items-center gap-1 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-secondary-container transition-colors p-2 rounded-lg scale-98 active:scale-95 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions for the preview card
+        const card = document.querySelector('.absolute.bottom-\\[80px\\]');
+        let startY;
+        
+        card.addEventListener('touchstart', (e) => {
+            startY = e.touches[0].clientY;
+        });
+
+        card.addEventListener('touchend', (e) => {
+            const endY = e.changedTouches[0].clientY;
+            if (startY - endY > 50) {
+                // Potential "expand" gesture
+                card.style.transform = 'translateY(-10px)';
+                setTimeout(() => card.style.transform = 'translateY(0)', 300);
+            }
+        });
+
+        // Simple marker click simulation
+        const markers = document.querySelectorAll('.absolute.z-0 > div');
+        markers.forEach(marker => {
+            marker.addEventListener('click', () => {
+                marker.classList.add('scale-125');
+                setTimeout(() => marker.classList.remove('scale-125'), 200);
+            });
+        });
+    </script>
+</body></html>

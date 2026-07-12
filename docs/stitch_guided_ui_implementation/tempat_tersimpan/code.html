@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tersimpan - Hidden Bites</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#e3e2e0",
+                    "on-primary-fixed-variant": "#930012",
+                    "on-secondary-container": "#626361",
+                    "text-muted": "#5F5F5F",
+                    "inverse-surface": "#313030",
+                    "tertiary": "#595a5b",
+                    "surface-container": "#f0edec",
+                    "on-primary-fixed": "#410004",
+                    "on-secondary-fixed-variant": "#464746",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1c1b1b",
+                    "surface-container-high": "#ebe7e7",
+                    "secondary": "#5e5e5d",
+                    "overlay-scrim": "rgba(0, 0, 0, 0.4)",
+                    "on-surface-variant": "#5e3f3c",
+                    "tertiary-fixed": "#e2e2e2",
+                    "surface-tint": "#c0001b",
+                    "primary": "#b7001a",
+                    "background": "#fcf9f8",
+                    "on-tertiary-container": "#f9f9f9",
+                    "on-secondary": "#ffffff",
+                    "surface": "#fcf9f8",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "tertiary-container": "#717373",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "surface-bright": "#fcf9f8",
+                    "secondary-container": "#e0dfde",
+                    "inverse-primary": "#ffb3ad",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-warm": "#FAF9F7",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#e8bcb8",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e5e2e1",
+                    "surface-container-low": "#f6f3f2",
+                    "outline": "#936e6b",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container-lowest": "#ffffff",
+                    "border-subtle": "#EEEEEE",
+                    "primary-container": "#e60023",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-background": "#1c1b1b",
+                    "primary-fixed": "#ffdad7",
+                    "on-secondary-fixed": "#1a1c1b",
+                    "secondary-fixed-dim": "#c7c6c5",
+                    "on-primary-container": "#fff7f6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "4px",
+                    "margin-tablet": "24px",
+                    "base": "8px",
+                    "gutter": "12px",
+                    "margin-mobile": "16px",
+                    "stack-md": "12px",
+                    "stack-lg": "24px",
+                    "section-gap": "32px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-lg": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["20px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "600"}],
+                    "headline-md-mobile": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "headline-xl": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .soft-shadow {
+            shadow-color: rgba(0, 0, 0, 0.04);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+        .glass-overlay {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-warm min-h-screen text-on-surface font-body-md">
+<!-- Top App Bar -->
+<header class="flex items-center justify-between px-margin-mobile w-full h-14 sticky top-0 z-50 bg-surface dark:bg-surface">
+<div class="flex items-center gap-4">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Tersimpan</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary">search</span>
+</button>
+</header>
+<!-- Content Canvas -->
+<main class="px-margin-mobile pb-24 pt-4">
+<!-- Filter Chips -->
+<div class="flex gap-2 mb-stack-lg overflow-x-auto no-scrollbar pb-2">
+<button class="bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap">Semua</button>
+<button class="bg-surface-container-lowest border border-border-subtle text-text-muted px-4 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap">Cafe</button>
+<button class="bg-surface-container-lowest border border-border-subtle text-text-muted px-4 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap">Restoran</button>
+<button class="bg-surface-container-lowest border border-border-subtle text-text-muted px-4 py-1.5 rounded-full font-label-md text-label-md whitespace-nowrap">Taman</button>
+</div>
+<!-- Saved Places Grid (Masonry Intent) -->
+<div class="masonry-grid">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden soft-shadow scale-98 active:scale-95 transition-transform duration-200">
+<div class="relative aspect-[4/5] overflow-hidden">
+<img alt="Cafe Interior" class="w-full h-full object-cover" data-alt="A cozy, minimalist coffee shop interior with warm wooden tables and soft ambient lighting. The walls are a creamy off-white, reflecting a gentle morning glow through large windows. Potted green plants add a touch of nature to the serene, high-end lifestyle setting. The atmosphere is quiet, sophisticated, and perfectly aligned with a warm minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzgP7-_hFwW4KbZIytb8r6ViGacneGYy4Q0JAakVwm0l8W0_4pVJPvOnYTNfwr3N6H83mQaMx1mxDU3clhygVTH9fmcjg8xlNjHVM2dddfVPfN5GrfOqW_fNikWDcRtBZ-z_GndhYTbNNA3SDTyNOh5yUU7BcNoFwn3awYB3HmGor18CH6n1oV55ZJurF5o25NV3ScOJjRohEMPuBFQWeVXHvnueAYjFSSM7nQo9SSPBhrmYwnRD8bKThlJgNpmI5wYEEzb6XFpr0"/>
+<button class="absolute top-2 right-2 w-8 h-8 glass-overlay rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md-mobile text-headline-md-mobile text-on-surface line-clamp-1">Kopi Nako</h3>
+<p class="font-label-md text-label-md text-text-muted mt-1">Sunter, Jakarta</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden soft-shadow scale-98 active:scale-95 transition-transform duration-200">
+<div class="relative aspect-square overflow-hidden">
+<img alt="Urban Hidden Spot" class="w-full h-full object-cover" data-alt="A beautiful hidden garden terrace in the heart of an urban city, featuring lush greenery and modern minimalist outdoor furniture. The scene is captured during the golden hour, with soft, warm sunlight filtering through leaves. The color palette is dominated by natural greens and earthy tones, maintaining a professional and realistic premium lifestyle vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXxpDZlpd2y7lKd2tvohHrOE6XM23H3n-U0NyWH5y55DUH_5I3Ca5PdwuFwRwKme87aZNNdj9qrQznkwX8gh3DYjcqtai0DIYuvDhzsI0rsyF_UdFMufUoHYw6fffI_FNw3tbhE_iQvo-4LI-LJkN253z0vmx2RKJzlxUzWvmzaWwwbhY7ceBwEb-Wih-vpRI5O1Zist8ymVsw2Z5c9WGcwgk9q_ppyMxEfxaYjbeLHP9ksV-k2pPADSTJxSBgejPpW4lraBBtaJQ"/>
+<button class="absolute top-2 right-2 w-8 h-8 glass-overlay rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md-mobile text-headline-md-mobile text-on-surface line-clamp-1">Taman Rahasia</h3>
+<p class="font-label-md text-label-md text-text-muted mt-1">Senopati, Jakarta</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden soft-shadow scale-98 active:scale-95 transition-transform duration-200">
+<div class="relative aspect-square overflow-hidden">
+<img alt="Dining Interior" class="w-full h-full object-cover" data-alt="An upscale, modern restaurant interior with sleek dark wood accents and elegant pendant lighting. The setting is intimate and tastefully designed, with a focus on high-quality materials and professional visual storytelling. The lighting is low-key yet warm, creating an inviting and exclusive atmosphere that highlights the urban explorer's refined taste." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKLxRfQnnHb_mA59fxP1mSns5Up9PmkBUeoiV4qP3l1y9DQGEjhD5K1DW6EmJ49dt865zK4kTlhUOwopU8QyBIsOb9yRvdyMvrwgNAnRYNdCF1VvjEJiYkTZey2AzYQcSUgkrWuTfMx2s688mUIYtvCMhCefn9GJL4X8Co7VSa5DCcTWEkjYbSM70Ui0PoKM4caWpTUbc-wD-wPUG7vd5FVFzgJaMkdeGARjQTjVOq6n59M3c49I5AgUIuZdmiqVOt-VQNbCYrMCU"/>
+<button class="absolute top-2 right-2 w-8 h-8 glass-overlay rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md-mobile text-headline-md-mobile text-on-surface line-clamp-1">The Dining Room</h3>
+<p class="font-label-md text-label-md text-text-muted mt-1">Menteng, Jakarta</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden soft-shadow scale-98 active:scale-95 transition-transform duration-200">
+<div class="relative aspect-[4/5] overflow-hidden">
+<img alt="Quiet Library Cafe" class="w-full h-full object-cover" data-alt="A tranquil library-themed cafe with tall bookshelves reaching the ceiling and small, private reading nooks. The aesthetic is warm and humanist, featuring soft incandescent lamps and plush seating in neutral tones. The space feels secretive and calm, perfect for an urban explorer seeking a quiet escape. The photography is clean, sharp, and realistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_0FLOdk-cQ7sxFZx4OjF-urxuDBjdzwf2utNwHsd6FcTLRffepnrXEnkIfhDXYXkyFCyP1-Jurrpc_ki6iqcKkIrD1MJexsIjhs6mvF1P9Ybcf5HpTqXVt4vU3mUCfKwt1pAAI_BCwQDFKaOBOTnBYihlFkcRn1YiKlkez-3h182ChVJCd_bCGmQkSqUQVT_T2Kqt-0zYFKse0MLqJd0M-Pm1joJemysqn5unu7BeYEokhCLIuqhZtkKp847tw2w0rV91lmIjQRM"/>
+<button class="absolute top-2 right-2 w-8 h-8 glass-overlay rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md-mobile text-headline-md-mobile text-on-surface line-clamp-1">Perpustakaan Kopi</h3>
+<p class="font-label-md text-label-md text-text-muted mt-1">Blok M, Jakarta</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden soft-shadow scale-98 active:scale-95 transition-transform duration-200">
+<div class="relative aspect-square overflow-hidden">
+<img alt="Outdoor Patio" class="w-full h-full object-cover" data-alt="A modern outdoor patio with clean white stone flooring and minimalist parasols. The background features a hint of urban skyline blurred softly into a bokeh effect. The sunlight is bright and clear, reflecting a high-key light mode style. The composition is balanced and elegant, emphasizing the sophisticated lifestyle of an urban traveler discovering premium spots." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8NR46fyOaUDH1-fJiMd2mWrjVmlSJouy5FYdQkRBYP307xkVfe-c__C374B8HBo0XIwktYWpcbpd-ph6fh_rswbf9cEXK-v8SdbVFZxZK4p_8DBbIPF5de7EqlSoSrcDS1AuPtOxq4bsV6hz_yK97YDrDUeKV4kvkelV_rHniRipLpZltCLZzKR9flI58p0PpLCrnl5-cMm0Wu2yQ5LXPTj6L1p9jT5rrvjzqyZ4a2AAW5_J__58wd5pX0IuLXTrZcc8OqZ767cI"/>
+<button class="absolute top-2 right-2 w-8 h-8 glass-overlay rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md-mobile text-headline-md-mobile text-on-surface line-clamp-1">Terrace Above</h3>
+<p class="font-label-md text-label-md text-text-muted mt-1">SCBD, Jakarta</p>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden soft-shadow scale-98 active:scale-95 transition-transform duration-200">
+<div class="relative aspect-[4/5] overflow-hidden">
+<img alt="Gourmet Food" class="w-full h-full object-cover" data-alt="A close-up shot of a beautifully plated gourmet dish in a modern bistro setting. The food is artistic and colorful, standing out against a simple, textured ceramic plate. The lighting is professional and soft, emphasizing the textures of the ingredients. The background is a warm, out-of-focus restaurant interior that feels premium and exclusive." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqi-6KfZQdY9GyTyYQim1NVon1WlsKHsqU4BjIJa_--ywWiisOHY02ohZJEf0UBQY0my3R0hwyJIc6tMeHdKDW-ETdh_0A7mwmLXHmqcvrPun3OiSHoeif2J7HmUqvfuANFeDn441ltvT0r7rg5h6Pr8epmDBZnIfHxQd-I8As7GzhuaYkXXR5I0_YJ-kzpGzA3EAOMADqYPBnvg_A26BBT5x2CdfZv6Nk10_MaYr23ODh766lnJ4TE7pwdip9xBgaswSvf9HPO7g"/>
+<button class="absolute top-2 right-2 w-8 h-8 glass-overlay rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md-mobile text-headline-md-mobile text-on-surface line-clamp-1">Bistro 77</h3>
+<p class="font-label-md text-label-md text-text-muted mt-1">Kemang, Jakarta</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-surface-container-lowest shadow-sm border-t border-border-subtle">
+<a class="flex flex-col items-center justify-center text-secondary p-2 hover:bg-secondary-container/20 rounded-full transition-all scale-98 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary p-2 hover:bg-secondary-container/20 rounded-full transition-all scale-98 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary p-2 hover:bg-secondary-container/20 rounded-full transition-all scale-98 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-primary-container/10 rounded-xl p-2 hover:bg-secondary-container/20 transition-all scale-98 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</a>
+</nav>
+<script>
+        // Simple Interaction logic
+        document.querySelectorAll('.masonry-grid > div').forEach(card => {
+            card.addEventListener('click', () => {
+                // Future expansion: open detail view
+                console.log('Navigating to spot details...');
+            });
+        });
+
+        // Bookmark toggle simulation
+        document.querySelectorAll('.glass-overlay').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const icon = btn.querySelector('.material-symbols-outlined');
+                const isFilled = icon.style.fontVariationSettings.includes("'FILL' 1");
+                
+                if (isFilled) {
+                    icon.style.fontVariationSettings = "'FILL' 0";
+                    btn.classList.remove('text-primary');
+                    btn.classList.add('text-secondary');
+                } else {
+                    icon.style.fontVariationSettings = "'FILL' 1";
+                    btn.classList.add('text-primary');
+                    btn.classList.remove('text-secondary');
+                }
+            });
+        });
+    </script>
+</body></html>

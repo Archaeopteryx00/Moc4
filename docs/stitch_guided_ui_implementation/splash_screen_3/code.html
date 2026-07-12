@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hidden Bites - Urban Explorer's Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#e60023",
+                      "surface-container": "#f0edec",
+                      "secondary": "#5e5e5d",
+                      "on-primary-container": "#fff7f6",
+                      "background": "#fcf9f8",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#f9f9f9",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed": "#410004",
+                      "secondary-fixed-dim": "#c7c6c5",
+                      "inverse-primary": "#ffb3ad",
+                      "inverse-surface": "#313030",
+                      "surface-dim": "#dcd9d9",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-secondary-container": "#626361",
+                      "outline-variant": "#e8bcb8",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#ebe7e7",
+                      "on-secondary-fixed": "#1a1c1b",
+                      "on-surface-variant": "#5e3f3c",
+                      "on-tertiary-fixed": "#1a1c1b",
+                      "overlay-scrim": "rgba(0, 0, 0, 0.4)",
+                      "on-error-container": "#93000a",
+                      "surface-bright": "#fcf9f8",
+                      "tertiary-fixed": "#e2e2e2",
+                      "outline": "#936e6b",
+                      "on-background": "#1c1b1b",
+                      "surface-tint": "#c0001b",
+                      "border-subtle": "#EEEEEE",
+                      "primary": "#b7001a",
+                      "on-secondary-fixed-variant": "#464746",
+                      "error": "#ba1a1a",
+                      "text-muted": "#5F5F5F",
+                      "surface-container-low": "#f6f3f2",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "tertiary-container": "#717373",
+                      "surface": "#fcf9f8",
+                      "inverse-on-surface": "#f3f0ef",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-primary-fixed-variant": "#930012",
+                      "on-surface": "#1c1b1b",
+                      "tertiary": "#595a5b",
+                      "secondary-fixed": "#e3e2e0",
+                      "primary-fixed-dim": "#ffb3ad",
+                      "primary-fixed": "#ffdad7",
+                      "surface-variant": "#e5e2e1",
+                      "secondary-container": "#e0dfde",
+                      "on-tertiary": "#ffffff",
+                      "surface-warm": "#FAF9F7"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "24px",
+                      "base": "8px",
+                      "stack-md": "12px",
+                      "section-gap": "32px",
+                      "margin-mobile": "16px",
+                      "gutter": "12px",
+                      "margin-tablet": "24px",
+                      "stack-sm": "4px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "label-md": ["Inter"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "label-sm": ["Inter"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "headline-xl": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                      "headline-lg": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "600"}],
+                      "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "headline-xl": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-xl-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .delay-1 { animation-delay: 0.3s; }
+        .delay-2 { animation-delay: 0.6s; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-warm min-h-screen flex flex-col items-center justify-center overflow-hidden">
+<!-- Splash Content Wrapper -->
+<main class="flex flex-col items-center justify-center px-margin-mobile text-center">
+<!-- Animated Background Ornament (Subtle Atmospheric Layer) -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary opacity-10 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary opacity-10 rounded-full blur-[100px]"></div>
+</div>
+<!-- Logo Container -->
+<div class="relative mb-stack-lg fade-in">
+<div class="w-24 h-24 md:w-32 md:h-32 bg-primary flex items-center justify-center rounded-full shadow-sm animate-float">
+<span class="material-symbols-outlined text-on-primary text-[40px] md:text-[56px]" style="font-variation-settings: 'FILL' 1;">
+                    restaurant
+                </span>
+</div>
+<!-- Secondary visual ring -->
+<div class="absolute inset-0 w-24 h-24 md:w-32 md:h-32 border-2 border-primary border-opacity-20 rounded-full scale-125 animate-pulse"></div>
+</div>
+<!-- Brand Identity -->
+<div class="space-y-stack-sm z-10">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary tracking-tight fade-in delay-1">
+                Hidden Bites
+            </h1>
+<p class="font-label-md text-label-md text-secondary tracking-[0.15em] fade-in delay-2 uppercase">
+                URBAN EXPLORER'S GUIDE
+            </p>
+</div>
+<!-- Decorative Element -->
+<div class="mt-section-gap flex items-center gap-stack-md fade-in delay-2 opacity-40">
+<div class="h-[1px] w-8 bg-outline"></div>
+<span class="material-symbols-outlined text-secondary text-sm">location_on</span>
+<div class="h-[1px] w-8 bg-outline"></div>
+</div>
+</main>
+<!-- Content-Rich Background Visuals (Hidden but used for atmospheric rendering) -->
+<div class="fixed bottom-0 left-0 right-0 h-1/4 flex justify-around items-end px-margin-mobile pointer-events-none opacity-30 select-none grayscale contrast-125">
+<img class="w-20 h-32 object-cover rounded-t-xl rotate-[-5deg] transform translate-y-8" data-alt="A moody, high-contrast black and white shot of a steaming bowl of artisanal ramen in a dimly lit, narrow Tokyo alleyway. The scene captures the warm glow of a neon sign reflecting on the wet pavement, creating a sense of urban mystery and culinary discovery. Minimalist composition with focus on the steam rising from the bowl." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnFZS369Rz41yFg-KuNVESa5sd82lhLd-blLg_Idq5hhTHi5nFE0QVEmrCN2b1xwdlD1OihRCqgFTtiUgiSV6cOdiFcHt2Jbdr1gOpOnNbT-6iQ77BXoGrpdRPyUVUlmzC_J0hbcXRWCkooNAUL2kqSoUGkp1wY9JOPl_vQTbqqwiTBrJhd5tFqP7wJ46YV70YHAKtVBWa-MWhhEgWNWJPAqB7-0Z3mBLafk_OS1PjgkkAZrO_3t8VlhYIEWwnkG-c6pt_h7R_h1U"/>
+<img class="w-24 h-40 object-cover rounded-t-xl translate-y-4" data-alt="A minimalist flat-lay of a wooden table featuring a single cup of black coffee and a small plate with a croissant. Soft morning light enters from a side window, casting long, elegant shadows across the table. The aesthetic is clean and high-end, focusing on high-quality textures and a warm, inviting humanist mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLontcGtaA2vqXL5Rb9sbvQ6RmIBCfE55HuQAZpuMfakpacHUxjnh0_V5RqjdULOT3Zn-yPJshWlC3MvQwBTDNm4Gm2L9Zogk6j5LcVcIgeucHCaDD4DKkc_wtrI8VU1h9SSF5t3N7qfnm16lvK0QYed1O7gdm9L8cPqXncR4hsZtH2CVQUmM51BhIyoBrHsUn8t0mZyJ6416EXSFcTXHn_pX23h3u2wql2mECREfR_bwMhYlZ7kb6lwzv3bXzaPGZmsJgrfqFc5E"/>
+<img class="w-20 h-32 object-cover rounded-t-xl rotate-[5deg] transform translate-y-8" data-alt="An atmospheric shot of a boutique bakery window at twilight, displaying golden-brown pastries arranged with minimalist precision. The lighting is warm and glowing from within, contrasting with the cool blue tones of the city exterior. The scene evokes a feeling of stumbling upon a hidden neighborhood gem during a late-night walk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJIeTZdq_hL38KL2CMtx5oi0SSAmT_gsfPaww7d7iTm7bSrKf9FGnIlr2nik1sugwMU8l1Yds-LvbbYiz7bdF6xf1J-3c8WzrVAm-MF65LXHYgUB8MemGaTvRZMpPM1_zSYo2a-16ukBx1H5N_H1NB6LnW649ZNmrJ0JBIH5mBWS2oGh0pJ-fxmlC90mTllM7O7CK5ArB4Mys52QyIfPUJyywDJPx0IQuLctud2HL8-XRtHn9hkJIyU34ekbA6Gu18AUXvDlVULnA"/>
+</div>
+<!-- Script for a tiny transition effect -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Subtle parallax effect on mouse move for desktop
+            if (window.innerWidth > 768) {
+                document.addEventListener('mousemove', (e) => {
+                    const x = (e.clientX - window.innerWidth / 2) / 100;
+                    const y = (e.clientY - window.innerHeight / 2) / 100;
+                    const logo = document.querySelector('.animate-float');
+                    if (logo) {
+                        logo.style.transform = `translate(${x}px, ${y}px)`;
+                    }
+                });
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#e60023",
+                    "surface-container": "#f0edec",
+                    "secondary": "#5e5e5d",
+                    "on-primary-container": "#fff7f6",
+                    "background": "#fcf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#f9f9f9",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#410004",
+                    "secondary-fixed-dim": "#c7c6c5",
+                    "inverse-primary": "#ffb3ad",
+                    "inverse-surface": "#313030",
+                    "surface-dim": "#dcd9d9",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-secondary-container": "#626361",
+                    "outline-variant": "#e8bcb8",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#ebe7e7",
+                    "on-secondary-fixed": "#1a1c1b",
+                    "on-surface-variant": "#5e3f3c",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "overlay-scrim": "rgba(0, 0, 0, 0.4)",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#fcf9f8",
+                    "tertiary-fixed": "#e2e2e2",
+                    "outline": "#936e6b",
+                    "on-background": "#1c1b1b",
+                    "surface-tint": "#c0001b",
+                    "border-subtle": "#EEEEEE",
+                    "primary": "#b7001a",
+                    "on-secondary-fixed-variant": "#464746",
+                    "error": "#ba1a1a",
+                    "text-muted": "#5F5F5F",
+                    "surface-container-low": "#f6f3f2",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "tertiary-container": "#717373",
+                    "surface": "#fcf9f8",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-primary-fixed-variant": "#930012",
+                    "on-surface": "#1c1b1b",
+                    "tertiary": "#595a5b",
+                    "secondary-fixed": "#e3e2e0",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "primary-fixed": "#ffdad7",
+                    "surface-variant": "#e5e2e1",
+                    "secondary-container": "#e0dfde",
+                    "on-tertiary": "#ffffff",
+                    "surface-warm": "#FAF9F7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "24px",
+                    "base": "8px",
+                    "stack-md": "12px",
+                    "section-gap": "32px",
+                    "margin-mobile": "16px",
+                    "gutter": "12px",
+                    "margin-tablet": "24px",
+                    "stack-sm": "4px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-lg": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "600"}],
+                    "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-xl": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md-mobile": ["18px", {"lineHeight": "24px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #FAF9F7;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-pill {
+            background-color: #1c1b1b;
+            color: #ffffff;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface">
+<!-- Top App Bar -->
+<header class="w-full top-0 sticky z-40 bg-surface-warm dark:bg-surface-dim shadow-sm opacity-4 flex justify-between items-center px-margin-mobile py-base">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-primary-fixed-dim">Tersimpan</h1>
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-primary-fixed-dim hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-border-subtle">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="A professional and stylish headshot of a young woman with a warm, friendly expression, set against a softly blurred urban architectural background. The lighting is natural and flattering, emphasizing a modern light-mode aesthetic with clean lines and a palette of soft neutrals and whites. The overall mood is sophisticated, approachable, and perfectly tailored for a high-end lifestyle application interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsj0LKkty6cCorbmk6wUznIDUH3J8EjvXoWmCyuR3SxykZjdGrn7d6vzcmQme5zYW7qEGA_MBacT9tbm9unD6CNEovjVNoA4zntkWG0vhxuHcSpMteOYAiP0sSmANs0w683dRWqvckaAhQw2lGQeWa8VmICHj7ZwEjK8C067YvvBlQ6ir19cggKTq-HBaYzF__vA3Z30Enge38bpJhRhQdOBHyn5zqYMV-AUj5B1UB8vQBCf3pBWjNRDH8mtH9YHLMZ578R1oKugM"/>
+</div>
+</div>
+</header>
+<main class="pb-24">
+<!-- Category Filter Section -->
+<section class="px-margin-mobile py-stack-md overflow-x-auto flex gap-base hide-scrollbar mt-2">
+<button class="active-pill px-stack-lg py-base rounded-full font-label-md text-label-md whitespace-nowrap transition-all duration-200">All</button>
+<button class="bg-surface-container-low text-text-muted px-stack-lg py-base rounded-full font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-highest transition-all duration-200">Cafe</button>
+<button class="bg-surface-container-low text-text-muted px-stack-lg py-base rounded-full font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-highest transition-all duration-200">Restoran</button>
+<button class="bg-surface-container-low text-text-muted px-stack-lg py-base rounded-full font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-highest transition-all duration-200">Park</button>
+</section>
+<!-- Saved Places Masonry Grid -->
+<section class="px-margin-mobile mt-base">
+<div class="masonry-grid">
+<!-- Place Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.04)] relative group">
+<div class="aspect-[4/5] relative">
+<img class="w-full h-full object-cover" data-alt="An interior shot of a minimalist, sun-drenched artisan coffee shop with light wood furniture and large industrial windows. The scene is bathed in soft, warm morning light, creating a serene and inviting atmosphere. The design features clean lines and a neutral color palette of off-whites and pale timbers, punctuated by small green plants. The mood is peaceful and high-end, representing a perfect urban retreat." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYTsLwHhJN9igXOzSA7T2BvUU6dy1mDb6qYyQKVHaKm57B4J-NNu6g37r2o9VcqNXr4nMemm_2OH73JcX7KI0bGG48ZT8_fUrG1gig5n_eb2N5f0ECn7u2e_WICknZk1pYbjmjs6CSp5ygwyKi7Oze74a7ZBZSKXGwFBMHG8JIcYjIszQzj-gLPUcTKTqx_p7Q5XBB0jtrrQxYqTfFpO581ZphCmXhZJ3ZZNW7VU3THN7Dzpft81Px3rPygkiMhjsH7-LeMPNQATU"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-primary transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md-mobile text-headline-md-mobile leading-tight mb-1">Kopi Nako</h3>
+<p class="font-label-sm text-label-sm text-text-muted">Senopati, Jakarta</p>
+</div>
+</div>
+<!-- Place Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.04)] relative group">
+<div class="aspect-square relative">
+<img class="w-full h-full object-cover" data-alt="A sophisticated fine dining restaurant interior with dim, warm ambient lighting and elegant modern furniture. Dark wooden tables are set with crisp white linens and minimalist ceramic plates. The atmosphere is intimate and luxurious, utilizing a refined color palette of deep grays, rich browns, and soft ivory. The scene conveys a sense of high-performance urban living and quiet, tasteful elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwqRFNHHHMMCtbc8oUM93CBw1DBnxCMw9vevL78aGb9Ow_-OkAa_wbLWukPQ5el1Yq3wJ1TqPy94z_xzcvjAbObbF8ujcaquOcpt_ki6zRrTHXIqWCmrhHwuWvJG4oCCzcNKKbHjc2VM37RmP-Ba9MalWSrIvqQ798D31RKIJYeg_D-1BiFM2Ym81fMNNZ7Zl2u66BlJ6iXc-3kH7q2sO-GOToNpXc2xjScLl6Q0RrzEScRxpjOnAxc0_z5uEAgDxkkwj4h9Mb5m8"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-primary transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md-mobile text-headline-md-mobile leading-tight mb-1">Osteria Gia</h3>
+<p class="font-label-sm text-label-sm text-text-muted">SCBD, Jakarta</p>
+</div>
+</div>
+<!-- Place Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.04)] relative group">
+<div class="aspect-square relative">
+<img class="w-full h-full object-cover" data-alt="A lush, modern urban park featuring beautifully manicured green lawns and architectural concrete paths. The late afternoon golden hour light casts long, soft shadows across the landscape, creating a tranquil and scenic vibe. The visual style is clean and contemporary, balancing natural textures with minimalist urban design. The mood is calm and observant, highlighting a quiet spot for exploration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4M8UVbqOYt3DnANYHUY5H5N0wk4drswWqviZ7FYhssc_rrT4O9M-mJX475caYzFTgSvRx10PIt-zR1VHnQhoh1n8h9APCBltqjNdUP0Q5in2b_iojx9qp0tzy9rG5GvviaQ4_2GKOsA_CNN4inZdpREgTygE_L20_W7mtk7QdV7XE8-6h2C2nkTmXh2o-jQ4_0OOFQE6jymtTvU2njiScazK8Gk5_6dFoSP2j00fjaSvrWdLKYHgVjjIBjeq8Rir08t3792nW1Qs"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-primary transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md-mobile text-headline-md-mobile leading-tight mb-1">Hutan Kota GBK</h3>
+<p class="font-label-sm text-label-sm text-text-muted">Senayan, Jakarta</p>
+</div>
+</div>
+<!-- Place Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.04)] relative group">
+<div class="aspect-[4/5] relative">
+<img class="w-full h-full object-cover" data-alt="A cozy, upscale dessert bar featuring a marble countertop and glass displays of meticulously crafted artisanal pastries. The lighting is focused and warm, highlighting the textures of the sweets and the high-end materials of the space. The aesthetic is realistic and premium, with a palette of cream, gold, and deep chocolate tones. The scene feels exclusive yet approachable, like a hidden gem in a bustling city." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC9GZFk18ZHTQuUaeWNDBw1qDPOo6F0J8TS7Mb3PAp_2IpRbJ4n4eRA-ADPRRlmENL2PO9BoVTxncrbadMS2NOE-0b1Nbw0Zw0hwJF0151NaP0iWyMczASRlYIIefB58kXxg5PE-lDkATcTe5pna31klSqgqfVJW1A3to3kWRdO6qf6HUbt217eNTh0Zgt3HHkp4Obz6oxSoGC8A9brg6wb2OPrp9dALaFfjHY-82C5yc8lrcyz-g56dEsvaDOfzZoZUMABef6-3k"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-primary transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md-mobile text-headline-md-mobile leading-tight mb-1">Scarlett's Cafe</h3>
+<p class="font-label-sm text-label-sm text-text-muted">PIK, Jakarta</p>
+</div>
+</div>
+<!-- Place Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.04)] relative group">
+<div class="aspect-square relative">
+<img class="w-full h-full object-cover" data-alt="A bright, airy co-working space and library with tall bookshelves and comfortable, ergonomic chairs. The space is filled with soft, diffused daylight from high windows, illuminating the modern, minimalist interior. The design uses a sophisticated mix of white surfaces and natural wood, creating a highly productive and serene atmosphere. The overall mood is quiet and focused, perfectly capturing a modern urban workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOyzOwf4usJIsW_QnHFqlNobNkUugCJbcoi_sQ3NB9R_su5SLBzjyxlxIWsnbS-bglQH6eWEcMJOIK_EbENTD0s5c9pnCmlYe9XDKMAO3-zmbxUM634zF3ctus2Jtiq567wPDxXF6tTkAWjzaElbwlIsNYAorJIaZWGS0YwzEG6_VOg1GahKHCbxWzQmqkd-CfJB6irhUFsGqmQBXAmnNsGs9X0lKQ57tEvNwY1X_lXfePzIxQYkJ5ueAbamByIJoQSvLFIcwgf40"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-primary transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md-mobile text-headline-md-mobile leading-tight mb-1">Perpus Jakarta</h3>
+<p class="font-label-sm text-label-sm text-text-muted">Cikini, Jakarta</p>
+</div>
+</div>
+<!-- Place Card 6 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.04)] relative group">
+<div class="aspect-[4/5] relative">
+<img class="w-full h-full object-cover" data-alt="A trendy rooftop lounge with a panoramic view of an urban skyline at dusk. The sky is painted in deep blues and oranges, while the lounge itself is lit by soft, warm string lights and modern glowing floor lamps. The visual style is premium and cinematic, with a palette of dark tones and warm golden accents. It represents a vibrant and tasteful nightlife destination for the urban explorer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtFlZhUQZWRjcLSKXCFILD8T6m2bPw-_4LlWnTo8I916X6eSkA76kg4K2QKxhXwddcwRS7N2NKzENfz5jaUhRDgautc0k1j8pvlAeJADbIptDc3vpcNaHyKuN0zFu6fxYq8Jhs_VXo9hk5-r3IGT7uAvJdswnOBlzMdKr8vKlSvEvPrJ5qqyIBeS-QTHmgcGhFX4-qubHIxuRUiqx8pGo2WPumb5bNPnHYnhRLIsOK952KO367ghytDdvtCGkxpzjZycusyonK-B0"/>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-primary transition-transform active:scale-90">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-stack-md">
+<h3 class="font-headline-md-mobile text-headline-md-mobile leading-tight mb-1">Hause Rooftop</h3>
+<p class="font-label-sm text-label-sm text-text-muted">Setiabudi, Jakarta</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-margin-mobile py-stack-md bg-surface-container-lowest dark:bg-inverse-surface shadow-[0_-2px_20px_rgba(0,0,0,0.06)] rounded-t-xl border-t border-border-subtle">
+<button class="text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-secondary-container transition-colors scale-98 active:scale-95 transition-all duration-200 flex flex-col items-center">
+<span class="material-symbols-outlined">home</span>
+</button>
+<button class="text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-secondary-container transition-colors scale-98 active:scale-95 transition-all duration-200 flex flex-col items-center">
+<span class="material-symbols-outlined">explore</span>
+</button>
+<button class="text-primary dark:text-primary-fixed-dim scale-110 hover:bg-surface-container-low dark:hover:bg-secondary-container transition-colors active:scale-95 transition-all duration-200 flex flex-col items-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<button class="text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-secondary-container transition-colors scale-98 active:scale-95 transition-all duration-200 flex flex-col items-center">
+<span class="material-symbols-outlined">person</span>
+</button>
+</nav>
+<!-- Floating Action Button -->
+<button class="fixed bottom-20 right-6 w-14 h-14 bg-primary-container text-on-primary rounded-full shadow-lg flex items-center justify-center scale-100 active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+<script>
+        // Simple Interaction for Chips
+        const chips = document.querySelectorAll('section button');
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => c.classList.remove('active-pill', 'bg-surface-container-low', 'text-text-muted'));
+                chips.forEach(c => {
+                    if (c !== chip) {
+                        c.classList.add('bg-surface-container-low', 'text-text-muted');
+                    }
+                });
+                chip.classList.add('active-pill');
+                chip.classList.remove('bg-surface-container-low', 'text-text-muted');
+            });
+        });
+
+        // Simple scale effect for cards on touch
+        const cards = document.querySelectorAll('.masonry-grid > div');
+        cards.forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+                card.style.transition = 'transform 0.2s ease';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

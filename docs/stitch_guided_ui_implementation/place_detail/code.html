@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#e60023",
+                    "surface-container": "#f0edec",
+                    "secondary": "#5e5e5d",
+                    "on-primary-container": "#fff7f6",
+                    "background": "#fcf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#f9f9f9",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#410004",
+                    "secondary-fixed-dim": "#c7c6c5",
+                    "inverse-primary": "#ffb3ad",
+                    "inverse-surface": "#313030",
+                    "surface-dim": "#dcd9d9",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-secondary-container": "#626361",
+                    "outline-variant": "#e8bcb8",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#ebe7e7",
+                    "on-secondary-fixed": "#1a1c1b",
+                    "on-surface-variant": "#5e3f3c",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "overlay-scrim": "rgba(0, 0, 0, 0.4)",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#fcf9f8",
+                    "tertiary-fixed": "#e2e2e2",
+                    "outline": "#936e6b",
+                    "on-background": "#1c1b1b",
+                    "surface-tint": "#c0001b",
+                    "border-subtle": "#EEEEEE",
+                    "primary": "#b7001a",
+                    "on-secondary-fixed-variant": "#464746",
+                    "error": "#ba1a1a",
+                    "text-muted": "#5F5F5F",
+                    "surface-container-low": "#f6f3f2",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "tertiary-container": "#717373",
+                    "surface": "#fcf9f8",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-primary-fixed-variant": "#930012",
+                    "on-surface": "#1c1b1b",
+                    "tertiary": "#595a5b",
+                    "secondary-fixed": "#e3e2e0",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "primary-fixed": "#ffdad7",
+                    "surface-variant": "#e5e2e1",
+                    "secondary-container": "#e0dfde",
+                    "on-tertiary": "#ffffff",
+                    "surface-warm": "#FAF9F7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "24px",
+                    "base": "8px",
+                    "stack-md": "12px",
+                    "section-gap": "32px",
+                    "margin-mobile": "16px",
+                    "gutter": "12px",
+                    "margin-tablet": "24px",
+                    "stack-sm": "4px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "headline-lg": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "26px", "fontWeight": "600"}],
+                    "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-xl": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-overlay {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-warm font-body-md text-on-surface antialiased mb-32">
+<!-- Header Navigation (Suppressing Shell for Detail Focus) -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-margin-mobile py-base">
+<button class="w-10 h-10 rounded-full glass-overlay flex items-center justify-center text-on-primary shadow-sm active:scale-90 transition-transform" onclick="window.history.back()">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<div class="flex gap-stack-md">
+<button class="w-10 h-10 rounded-full glass-overlay flex items-center justify-center text-on-primary shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[530px] w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A sophisticated modern coffee bar with a minimalist aesthetic, featuring sleek wooden counters and industrial lighting. The atmosphere is warm and inviting, with soft natural light streaming through large windows in a quiet urban setting. A single barista is seen in the background, surrounded by premium coffee equipment in a space characterized by clean lines and warm off-white tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUaqNClkkHuAoEpJp-0pPsHLBt6Af4l1TfCATSyv630KSIdOPN8tJkwGOBQVL7wPgc0BeiSsWAR99PLUFWz80Mq1uLdcA3vCCXWYTA5t-GzAAsrUwxC018VxXMBlKig5H2yFks6llGwzS2BnBxQV03274zYh97GH5ljhZmVQ8bFOIQoP0jEqj1nQ34gHIt8EO3Ew7C3efI0K2sR0CP3owuhNsY7RsGv3ANkQ2GvnNbOzELqs2MdN2CXdf4chQmDVQ7fTbh3MXxhgI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 px-margin-mobile pb-section-gap">
+<div class="flex items-center gap-base mb-stack-sm">
+<span class="bg-primary px-stack-md py-1 rounded-full text-on-primary font-label-md text-label-md">Coffee Shop</span>
+<div class="flex items-center gap-1 text-on-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline-md text-headline-md-mobile">4.8</span>
+</div>
+</div>
+<h1 class="text-white font-headline-xl text-headline-xl text-balance">Kopi Nanti Dulu</h1>
+</div>
+</section>
+<!-- Content Canvas -->
+<main class="relative -mt-6 bg-surface-warm rounded-t-3xl px-margin-mobile pt-stack-lg">
+<!-- Category Tags -->
+<div class="flex flex-wrap gap-stack-md mb-section-gap">
+<span class="px-stack-lg py-base bg-surface-container rounded-full text-text-muted font-label-md text-label-md">Spesialis Kopi</span>
+<span class="px-stack-lg py-base bg-surface-container rounded-full text-text-muted font-label-md text-label-md">Tenang</span>
+<span class="px-stack-lg py-base bg-surface-container rounded-full text-text-muted font-label-md text-label-md">Minimalis</span>
+</div>
+<!-- Long-form Review -->
+<article class="mb-section-gap">
+<h2 class="font-headline-md text-headline-md-mobile mb-stack-md text-primary">Cerita di Balik Jendela</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg leading-relaxed mb-stack-lg">
+                Tersembunyi di sudut teduh Senopati, Kopi Nanti Dulu menawarkan lebih dari sekadar asupan kafein. Interiornya yang mengusung konsep Wabi-sabi modern menciptakan jeda yang sempurna dari hiruk-pikuk Jakarta Selatan. Cahaya matahari pagi menyelinap lembut melalui kaca setinggi langit-langit, menyinari tekstur semen ekspos dan elemen kayu yang hangat.
+            </p>
+<p class="text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
+                Kopinya dikurasi dengan presisi—setiap cangkir menceritakan asal-usul biji kopi nusantara yang diproses dengan standar kelas dunia. Rekomendasi saya adalah menu 'Signature Slow Brew' yang disajikan dengan ketenangan yang menular. Tempat ini adalah rumah bagi para urban explorer yang mencari inspirasi dalam kesunyian.
+            </p>
+</article>
+<!-- Map Section -->
+<section class="mb-section-gap">
+<div class="flex justify-between items-end mb-stack-md">
+<div>
+<h2 class="font-headline-md text-headline-md-mobile">Lokasi</h2>
+<p class="text-text-muted font-body-md text-body-md">Senopati, Jakarta Selatan</p>
+</div>
+<button class="text-primary font-label-md text-label-md flex items-center gap-1">
+                    Petunjuk Jalan <span class="material-symbols-outlined text-[16px]" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+<div class="w-full h-48 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
+<img class="w-full h-full object-cover" data-location="Senopati, Jakarta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAE_8lJctc_qYOJfzVRlL4EMRaoSYVQs32aIySKZPoi7SCaUSWyLX2fmO-aQqvKxQ4TlIdVN4PyDmDkTpylM1o-xgMkv7JIo7RWfDBuk0cn7X9ooUSwRe2738SlUg71-u4U5aNkL32LOcXtieW-lRNGqNMEV702ERd-n6-KC4r40fFFve3PdKK26fZtuiHszu8y4fcU-bA2DnHYxW2SkYA59lzFfEIusu3Ta4eGSDWTzccdkPewiHYLFqHCpvSX2Q9Qg0_Ki-P1Nw"/>
+<div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</section>
+<!-- Photo Gallery (Asymmetric Layout) -->
+<section class="mb-section-gap pb-8">
+<h2 class="font-headline-md text-headline-md-mobile mb-stack-md">Galeri Foto</h2>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="space-y-stack-md">
+<div class="rounded-xl overflow-hidden aspect-[3/4]">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of a beautifully crafted latte art in a minimalist ceramic cup. The drink sits on a light oak wooden table in a high-key, sun-drenched environment. The style is clean and sophisticated, with soft bokeh background showing the blurred interior of a high-end coffee shop using a neutral, warm color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4fVZo5doxS0k4CsD_kJ3kvftuQ9_u8oUx_lZNb5DOy097diVTUiiT2VMHp5TeROyP5jFfiyTZlWf5s5R05EZ3Yi3lVdZTxnnj3IuYI5XfgXIC3l9X_hkI_kAUa59zyZoqjshJxelCWGcejcs2HdSRr8d_IhAQD313SEwZIDWNPpSCI22wxio7fjVCzVYWFmrnDO_6IbaT6F_m67x-N-jxZ65WlhyeQzbB7VVm-p4KDET7ezRUdHZ7GxF8tapum0Ireu00vcVmNYw"/>
+</div>
+<div class="rounded-xl overflow-hidden aspect-square">
+<img class="w-full h-full object-cover" data-alt="Detail of a modern coffee brewing apparatus in a minimalist cafe setting. The lighting is crisp and clean, highlighting the textures of glass and metal against a warm off-white wall. The aesthetic is professional and calm, focused on the art of coffee making with a lifestyle magazine photography feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcO6-a98KLw6YwppxRpdKGn4MioPGNW84l_DUsFdRc1-EJQvpjHNHJipgPMBcvQGrdbAloEMjAherPthWZRiUkmNUS7UJj4laqyfWB9y-T5ToX1TgURZA9FCuX12olvRZyF3T5HqBQ58VOyE2z0QZ0sCn2om4HwxpGk1SLLIANcQV7mjV_-DMkivDeMY9Vy4efGSWPLQ19La3PK91fhgdDgDJfgfNRJ_dWUPKc1JuQFbaa0O-vCkX_zNDfZ9hlxvZzd7GarfIlWuY"/>
+</div>
+</div>
+<div class="space-y-stack-md">
+<div class="rounded-xl overflow-hidden aspect-square">
+<img class="w-full h-full object-cover" data-alt="The exterior entrance of a chic minimalist building in a lush urban neighborhood. Large windows reveal a warm, glowing interior while green plants frame the sleek architecture. The lighting is early evening, providing a soft ambient glow that highlights the premium materials and sophisticated design of the space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdXySPiSXoJglnL53SZmFbaWufMzJGTXQlqb_da6YLII0qpQaAstyjNpeBQp5t-rk-v2zatrtSTj0RyHQ08J9xo9rCWR2ZGAWlGhTY0VUei-2gQMrfIAwCf62M6YAaYbpMkoboKGirFgCh27Nr6g1yQNhleuVNgHhcE4JQhpOHmhfpaAHxfo8FoGn8fct9wgI5r3h1gIYEYN6k3jJ-GixpyXrPBNolcl8CJtxrKAhBFfrHtxEKc6gzxoDGa2ofbpsXi1OIBFYrdxU"/>
+</div>
+<div class="rounded-xl overflow-hidden aspect-[3/4]">
+<img class="w-full h-full object-cover" data-alt="A quiet corner of a designer coffee shop featuring a single armchair and a small table with a book and a coffee cup. The scene is illuminated by soft, directional light creating a serene, peaceful mood. The colors are predominantly warm whites and light woods, echoing a minimalist lifestyle aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmxo82pz-MOWbA85PSVsIaY-3qe8Ck90xVeM8AiNMMik45JscsS8pjumigB51K90mufu2JfAKwFSJ-ersLEVaUE87STov5pFPWNr4BlPvV8TIZHPnFOW4eu5N8WCPYqypcA7mFj3hYnSREDLyhDnt1Z8vReph1LsAKW9UitCJuLwVCNDPCGyHJ3rkOUPnpks5HFnBPZ55C2T9Vyru-QTtxlBLDsJS9jO_QTVmS3KJ5G1t4lrBYZ96aracE0C6N7ooFY0VJ7PdxWHg"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Actions Shell -->
+<footer class="fixed bottom-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md px-margin-mobile py-stack-md border-t border-border-subtle">
+<div class="max-w-screen-md mx-auto flex items-center gap-stack-md">
+<button class="flex-[1] flex items-center justify-center gap-stack-sm py-4 rounded-xl border border-border-subtle text-on-surface font-label-md text-label-md active:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+                Simpan
+            </button>
+<button class="flex-[2] py-4 bg-primary rounded-xl text-on-primary font-label-md text-label-md shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                Kunjungi
+            </button>
+</div>
+</footer>
+<script>
+        // Micro-interaction for scroll effects
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const scrollY = window.scrollY;
+            if (scrollY > 50) {
+                header.classList.add('bg-surface-warm/90', 'backdrop-blur-md', 'shadow-sm');
+                header.querySelector('button').classList.remove('glass-overlay');
+                header.querySelector('button').classList.add('bg-surface-container');
+                header.querySelector('button').classList.remove('text-on-primary');
+                header.querySelector('button').classList.add('text-primary');
+                
+                const shareBtn = header.querySelectorAll('button')[1];
+                shareBtn.classList.remove('glass-overlay');
+                shareBtn.classList.add('bg-surface-container');
+                shareBtn.classList.remove('text-on-primary');
+                shareBtn.classList.add('text-primary');
+            } else {
+                header.classList.remove('bg-surface-warm/90', 'backdrop-blur-md', 'shadow-sm');
+                header.querySelector('button').classList.add('glass-overlay');
+                header.querySelector('button').classList.remove('bg-surface-container');
+                header.querySelector('button').classList.add('text-on-primary');
+                header.querySelector('button').classList.remove('text-primary');
+
+                const shareBtn = header.querySelectorAll('button')[1];
+                shareBtn.classList.add('glass-overlay');
+                shareBtn.classList.remove('bg-surface-container');
+                shareBtn.classList.add('text-on-primary');
+                shareBtn.classList.remove('text-primary');
+            }
+        });
+    </script>
+</body></html>
